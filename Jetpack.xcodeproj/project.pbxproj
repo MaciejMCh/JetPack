@@ -11,6 +11,15 @@
 		C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */; };
 		C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */; };
 		C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A511D9FCA02008ECCDD /* Main.storyboard */; };
+		C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A5C1D9FCD3F008ECCDD /* SceneEditor.storyboard */; };
+		C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A5E1D9FCD97008ECCDD /* SceneEditorViewController.swift */; };
+		C2A34A671D9FD081008ECCDD /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A661D9FD081008ECCDD /* Scene.swift */; };
+		C2A34A6B1D9FD0FB008ECCDD /* Visible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A6A1D9FD0FB008ECCDD /* Visible.swift */; };
+		C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A6D1D9FD119008ECCDD /* Node.swift */; };
+		C2A34A731D9FD3B4008ECCDD /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A721D9FD3B4008ECCDD /* Element.swift */; };
+		C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7B1D9FD60D008ECCDD /* Transform.swift */; };
+		C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */; };
+		C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A811D9FD811008ECCDD /* Rotiation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A34A521D9FCA02008ECCDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2A34A541D9FCA02008ECCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A34A5C1D9FCD3F008ECCDD /* SceneEditor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneEditor.storyboard; path = SceneEditor/SceneEditor.storyboard; sourceTree = "<group>"; };
+		C2A34A5E1D9FCD97008ECCDD /* SceneEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneEditorViewController.swift; path = SceneEditor/SceneEditorViewController.swift; sourceTree = "<group>"; };
+		C2A34A661D9FD081008ECCDD /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = Models/Scene/Scene.swift; sourceTree = "<group>"; };
+		C2A34A6A1D9FD0FB008ECCDD /* Visible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Visible.swift; path = Models/Visible/Visible.swift; sourceTree = "<group>"; };
+		C2A34A6D1D9FD119008ECCDD /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = Models/Node/Node.swift; sourceTree = "<group>"; };
+		C2A34A721D9FD3B4008ECCDD /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Models/Element/Element.swift; sourceTree = "<group>"; };
+		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
+		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
+		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +70,9 @@
 		C2A34A4A1D9FCA02008ECCDD /* Jetpack */ = {
 			isa = PBXGroup;
 			children = (
+				C2A34A631D9FD048008ECCDD /* Models */,
+				C2A34A621D9FD00F008ECCDD /* DrawableEditor */,
+				C2A34A5B1D9FCCE3008ECCDD /* SceneEditor */,
 				C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */,
 				C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */,
 				C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */,
@@ -59,6 +80,92 @@
 				C2A34A541D9FCA02008ECCDD /* Info.plist */,
 			);
 			path = Jetpack;
+			sourceTree = "<group>";
+		};
+		C2A34A5B1D9FCCE3008ECCDD /* SceneEditor */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A5C1D9FCD3F008ECCDD /* SceneEditor.storyboard */,
+				C2A34A5E1D9FCD97008ECCDD /* SceneEditorViewController.swift */,
+			);
+			name = SceneEditor;
+			sourceTree = "<group>";
+		};
+		C2A34A621D9FD00F008ECCDD /* DrawableEditor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DrawableEditor;
+			sourceTree = "<group>";
+		};
+		C2A34A631D9FD048008ECCDD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A801D9FD7FA008ECCDD /* Rotation */,
+				C2A34A7D1D9FD68D008ECCDD /* Primitives */,
+				C2A34A781D9FD5D7008ECCDD /* Transform */,
+				C2A34A711D9FD379008ECCDD /* Element */,
+				C2A34A6C1D9FD0FF008ECCDD /* Node */,
+				C2A34A651D9FD059008ECCDD /* Visible */,
+				C2A34A641D9FD050008ECCDD /* Scene */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C2A34A641D9FD050008ECCDD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A661D9FD081008ECCDD /* Scene.swift */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C2A34A651D9FD059008ECCDD /* Visible */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A6A1D9FD0FB008ECCDD /* Visible.swift */,
+			);
+			name = Visible;
+			sourceTree = "<group>";
+		};
+		C2A34A6C1D9FD0FF008ECCDD /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A6D1D9FD119008ECCDD /* Node.swift */,
+			);
+			name = Node;
+			sourceTree = "<group>";
+		};
+		C2A34A711D9FD379008ECCDD /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A721D9FD3B4008ECCDD /* Element.swift */,
+			);
+			name = Element;
+			sourceTree = "<group>";
+		};
+		C2A34A781D9FD5D7008ECCDD /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A7B1D9FD60D008ECCDD /* Transform.swift */,
+			);
+			name = Transform;
+			sourceTree = "<group>";
+		};
+		C2A34A7D1D9FD68D008ECCDD /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */,
+			);
+			name = Primitives;
+			sourceTree = "<group>";
+		};
+		C2A34A801D9FD7FA008ECCDD /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+				C2A34A811D9FD811008ECCDD /* Rotiation.swift */,
+			);
+			name = Rotation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +229,7 @@
 			files = (
 				C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */,
 				C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */,
+				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,8 +240,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A34A671D9FD081008ECCDD /* Scene.swift in Sources */,
+				C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */,
+				C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */,
 				C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */,
+				C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */,
 				C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */,
+				C2A34A731D9FD3B4008ECCDD /* Element.swift in Sources */,
+				C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */,
+				C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */,
+				C2A34A6B1D9FD0FB008ECCDD /* Visible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
