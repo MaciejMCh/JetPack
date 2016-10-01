@@ -35,6 +35,13 @@ class Matrix4 {
     
 }
 
-class Vector3 {
+class Vector3: JetPrimitive {
+    typealias CPUType = (x: Scalar, y: Scalar, z: Scalar)
+    
+    var value: CPUType
+    
+    init(value: CPUType = (x: Scalar(), y: Scalar(), z: Scalar())) {
+        self.value = value
+    }
     
 }

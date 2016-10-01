@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol EditableModel {
-    var properties: [EditableProperty] {get}
-}
-
 protocol EditableProperty {
     func updateValue()
 }
@@ -30,4 +26,24 @@ class PrimitiveEditableProperty<T: JetPrimitive>: EditableProperty {
     func updateValue() {
         property.value = value
     }
+}
+
+class ModelEditableProperty: EditableProperty {
+    let name: String
+    let model: EditableModel
+    
+    init(name: String, model: EditableModel) {
+        self.name = name
+        self.model = model
+    }
+    
+    func updateValue() {
+        for property in model.properties {
+            property.updateValue()
+        }
+    }
+}
+
+protocol EditableModel {
+    var properties: [EditableProperty] {get}
 }

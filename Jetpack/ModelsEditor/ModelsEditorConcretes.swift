@@ -9,5 +9,25 @@
 import Foundation
 
 extension Node: EditableModel {
-    var properties: [EditableProperty] {return [PrimitiveEditableProperty(name: "identity", property: identity)]}
+    var properties: [EditableProperty] {
+        return [
+            PrimitiveEditableProperty(name: "identity", property: identity),
+            ModelEditableProperty(name: "element", model: element)
+        ]}
+}
+
+extension Element: EditableModel {
+    var properties: [EditableProperty] {
+        return [
+            
+        ]
+    }
+}
+
+extension StaticTransformation: EditableModel {
+    var properties: [EditableProperty] {
+        return [
+            PrimitiveEditableProperty(name: "position", property: position)
+        ]
+    }
 }

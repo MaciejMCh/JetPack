@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C203D40B1DA03AB1003DF46C /* ModelsEditorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D40A1DA03AB1003DF46C /* ModelsEditorDisplayer.swift */; };
+		C203D4101DA03E68003DF46C /* TagEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C203D40C1DA03E68003DF46C /* TagEditorViewController.storyboard */; };
+		C203D4111DA03E68003DF46C /* TagEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D40D1DA03E68003DF46C /* TagEditorViewController.swift */; };
+		C203D4121DA03E68003DF46C /* Vector3EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C203D40E1DA03E68003DF46C /* Vector3EditorViewController.storyboard */; };
+		C203D4131DA03E68003DF46C /* Vector3EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */; };
+		C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D4141DA03E80003DF46C /* OSXDisplayer.swift */; };
 		C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */; };
 		C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */; };
-		C252CF341DA01C9300E1D288 /* TagEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */; };
-		C291880A1DA025AE00E7F939 /* TagEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */; };
 		C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */; };
 		C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */; };
 		C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */; };
@@ -24,13 +28,19 @@
 		C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7B1D9FD60D008ECCDD /* Transform.swift */; };
 		C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */; };
 		C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A811D9FD811008ECCDD /* Rotiation.swift */; };
+		C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F1C71DA04840007890DE /* CompoundViewController.swift */; };
+		C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C203D40A1DA03AB1003DF46C /* ModelsEditorDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorDisplayer.swift; path = ModelsEditor/ModelsEditorDisplayer.swift; sourceTree = "<group>"; };
+		C203D40C1DA03E68003DF46C /* TagEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TagEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/TagEditorViewController.storyboard; sourceTree = "<group>"; };
+		C203D40D1DA03E68003DF46C /* TagEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagEditorViewController.swift; path = ModelsEditor/OSXDisplayers/TagEditorViewController.swift; sourceTree = "<group>"; };
+		C203D40E1DA03E68003DF46C /* Vector3EditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Vector3EditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/Vector3EditorViewController.storyboard; sourceTree = "<group>"; };
+		C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vector3EditorViewController.swift; path = ModelsEditor/OSXDisplayers/Vector3EditorViewController.swift; sourceTree = "<group>"; };
+		C203D4141DA03E80003DF46C /* OSXDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSXDisplayer.swift; path = ModelsEditor/OSXDisplayers/OSXDisplayer.swift; sourceTree = "<group>"; };
 		C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorInterface.swift; path = ModelsEditor/ModelsEditorInterface.swift; sourceTree = "<group>"; };
 		C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorConcretes.swift; path = ModelsEditor/ModelsEditorConcretes.swift; sourceTree = "<group>"; };
-		C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagEditorViewController.swift; path = ModelsEditor/OSXEditors/TagEditorViewController.swift; sourceTree = "<group>"; };
-		C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TagEditorViewController.storyboard; path = ModelsEditor/OSXEditors/TagEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2A34A481D9FCA02008ECCDD /* Jetpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jetpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +56,8 @@
 		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
 		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
+		C2F0F1C71DA04840007890DE /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundViewController.swift; path = ModelsEditor/OSXDisplayers/CompoundViewController.swift; sourceTree = "<group>"; };
+		C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CompoundViewController.storyboard; path = ModelsEditor/OSXDisplayers/CompoundViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,20 +74,26 @@
 		C252CF281DA01AE900E1D288 /* ModelsEditor */ = {
 			isa = PBXGroup;
 			children = (
-				C252CF2D1DA01B8300E1D288 /* OSXEditors */,
+				C252CF2D1DA01B8300E1D288 /* OSXDisplayers */,
 				C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */,
 				C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */,
+				C203D40A1DA03AB1003DF46C /* ModelsEditorDisplayer.swift */,
 			);
 			name = ModelsEditor;
 			sourceTree = "<group>";
 		};
-		C252CF2D1DA01B8300E1D288 /* OSXEditors */ = {
+		C252CF2D1DA01B8300E1D288 /* OSXDisplayers */ = {
 			isa = PBXGroup;
 			children = (
-				C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */,
-				C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */,
+				C203D4141DA03E80003DF46C /* OSXDisplayer.swift */,
+				C203D40C1DA03E68003DF46C /* TagEditorViewController.storyboard */,
+				C203D40D1DA03E68003DF46C /* TagEditorViewController.swift */,
+				C203D40E1DA03E68003DF46C /* Vector3EditorViewController.storyboard */,
+				C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */,
+				C2F0F1C71DA04840007890DE /* CompoundViewController.swift */,
+				C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */,
 			);
-			name = OSXEditors;
+			name = OSXDisplayers;
 			sourceTree = "<group>";
 		};
 		C2A34A3F1D9FCA02008ECCDD = {
@@ -255,10 +273,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */,
 				C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */,
 				C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */,
 				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
-				C291880A1DA025AE00E7F939 /* TagEditorViewController.storyboard in Resources */,
+				C203D4121DA03E68003DF46C /* Vector3EditorViewController.storyboard in Resources */,
+				C203D4101DA03E68003DF46C /* TagEditorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +291,16 @@
 			files = (
 				C2A34A671D9FD081008ECCDD /* Scene.swift in Sources */,
 				C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */,
+				C203D4131DA03E68003DF46C /* Vector3EditorViewController.swift in Sources */,
 				C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */,
+				C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */,
 				C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */,
 				C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */,
+				C203D40B1DA03AB1003DF46C /* ModelsEditorDisplayer.swift in Sources */,
 				C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */,
 				C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */,
-				C252CF341DA01C9300E1D288 /* TagEditorViewController.swift in Sources */,
+				C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */,
+				C203D4111DA03E68003DF46C /* TagEditorViewController.swift in Sources */,
 				C2A34A731D9FD3B4008ECCDD /* Element.swift in Sources */,
 				C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */,
 				C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */,
