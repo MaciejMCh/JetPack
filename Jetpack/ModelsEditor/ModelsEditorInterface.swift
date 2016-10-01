@@ -47,3 +47,19 @@ class ModelEditableProperty: EditableProperty {
 protocol EditableModel {
     var properties: [EditableProperty] {get}
 }
+
+class OptionEditableProperty: EditableProperty {
+    let name: String
+    let options: [EditableProperty]
+    var selectedOption: EditableProperty
+    
+    init(name: String, options: [EditableProperty]) {
+        self.name = name
+        self.options = options
+        selectedOption = options.first!
+    }
+    
+    func updateValue() {
+        selectedOption.updateValue()
+    }
+}
