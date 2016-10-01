@@ -12,8 +12,10 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let controller = TagEditorViewController.withTagProperty(tagProperty: PrimitiveEditableProperty(name: "identifier", property: Tag(value: "node_0")))
+        view.addSubview(controller.view)
+        controller.view.frame = view.frame
+        addChildViewController(controller)
     }
 
     override var representedObject: Any? {

@@ -8,8 +8,27 @@
 
 import Foundation
 
-class Scalar {
+protocol JetPrimitive {
+    associatedtype CPUType
+    var value: CPUType {get set}
+}
+
+class Tag: JetPrimitive {
+    typealias CPUType = String
     
+    var value: String
+    
+    init(value: String = "") {
+        self.value = value
+    }
+}
+
+class Scalar {
+    var value: Float
+    
+    init(value: Float = 0.0) {
+        self.value = value
+    }
 }
 
 class Matrix4 {

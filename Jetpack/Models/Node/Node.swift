@@ -9,6 +9,6 @@
 import Foundation
 
 class Node {
-    var identity: String = "node"
+    var identity: Tag = Tag()
     var element: Element = Element()
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */; };
+		C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */; };
+		C252CF341DA01C9300E1D288 /* TagEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */; };
+		C291880A1DA025AE00E7F939 /* TagEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */; };
 		C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */; };
 		C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */; };
 		C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorInterface.swift; path = ModelsEditor/ModelsEditorInterface.swift; sourceTree = "<group>"; };
+		C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorConcretes.swift; path = ModelsEditor/ModelsEditorConcretes.swift; sourceTree = "<group>"; };
+		C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TagEditorViewController.swift; path = ModelsEditor/OSXEditors/TagEditorViewController.swift; sourceTree = "<group>"; };
+		C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TagEditorViewController.storyboard; path = ModelsEditor/OSXEditors/TagEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2A34A481D9FCA02008ECCDD /* Jetpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jetpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C252CF281DA01AE900E1D288 /* ModelsEditor */ = {
+			isa = PBXGroup;
+			children = (
+				C252CF2D1DA01B8300E1D288 /* OSXEditors */,
+				C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */,
+				C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */,
+			);
+			name = ModelsEditor;
+			sourceTree = "<group>";
+		};
+		C252CF2D1DA01B8300E1D288 /* OSXEditors */ = {
+			isa = PBXGroup;
+			children = (
+				C252CF331DA01C9300E1D288 /* TagEditorViewController.swift */,
+				C29188091DA025AE00E7F939 /* TagEditorViewController.storyboard */,
+			);
+			name = OSXEditors;
+			sourceTree = "<group>";
+		};
 		C2A34A3F1D9FCA02008ECCDD = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +97,7 @@
 		C2A34A4A1D9FCA02008ECCDD /* Jetpack */ = {
 			isa = PBXGroup;
 			children = (
+				C252CF281DA01AE900E1D288 /* ModelsEditor */,
 				C2A34A631D9FD048008ECCDD /* Models */,
 				C2A34A621D9FD00F008ECCDD /* DrawableEditor */,
 				C2A34A5B1D9FCCE3008ECCDD /* SceneEditor */,
@@ -230,6 +258,7 @@
 				C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */,
 				C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */,
 				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
+				C291880A1DA025AE00E7F939 /* TagEditorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,15 +270,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A34A671D9FD081008ECCDD /* Scene.swift in Sources */,
+				C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */,
 				C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */,
 				C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */,
 				C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */,
 				C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */,
 				C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */,
+				C252CF341DA01C9300E1D288 /* TagEditorViewController.swift in Sources */,
 				C2A34A731D9FD3B4008ECCDD /* Element.swift in Sources */,
 				C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */,
 				C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */,
 				C2A34A6B1D9FD0FB008ECCDD /* Visible.swift in Sources */,
+				C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +434,7 @@
 				C2A34A591D9FCA02008ECCDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
