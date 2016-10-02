@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="KVa-uy-ZPi">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <scenes>
+        <!--Options Editor View Controller-->
+        <scene sceneID="SDE-P1-273">
+            <objects>
+                <viewController id="KVa-uy-ZPi" customClass="OptionsEditorViewController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="LWS-gi-zMF">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="64"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QX3-UQ-S7z">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="64"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="poU-9f-E1T">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="64"/>
+                                        <subviews>
+                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f8T-lS-1yY">
+                                                <rect key="frame" x="85" y="4" width="76" height="26"/>
+                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Dy2-ru-gbM" id="z9P-Wt-Fy0">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="menu"/>
+                                                    <menu key="menu" id="XDD-2O-c4G">
+                                                        <items>
+                                                            <menuItem title="Item 1" state="on" id="Dy2-ru-gbM"/>
+                                                            <menuItem title="Item 2" id="h3D-ji-P4H"/>
+                                                            <menuItem title="Item 3" id="Fr6-T4-ZBt"/>
+                                                        </items>
+                                                    </menu>
+                                                </popUpButtonCell>
+                                            </popUpButton>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nap-29-IRB">
+                                                <rect key="frame" x="8" y="37" width="37" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="KHc-lf-GyD">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tx2-nn-L8Z">
+                                                <rect key="frame" x="8" y="10" width="31" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="type" id="ru7-YF-lAn">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="f8T-lS-1yY" firstAttribute="leading" secondItem="Tx2-nn-L8Z" secondAttribute="trailing" constant="50" id="0xy-xT-Bhv"/>
+                                            <constraint firstItem="f8T-lS-1yY" firstAttribute="baseline" secondItem="Tx2-nn-L8Z" secondAttribute="baseline" id="1cp-X4-sBv"/>
+                                            <constraint firstItem="Nap-29-IRB" firstAttribute="leading" secondItem="poU-9f-E1T" secondAttribute="leading" constant="10" id="Bir-38-aYp"/>
+                                            <constraint firstAttribute="trailing" secondItem="f8T-lS-1yY" secondAttribute="trailing" constant="50" id="ChQ-ag-VhJ"/>
+                                            <constraint firstItem="Nap-29-IRB" firstAttribute="top" secondItem="poU-9f-E1T" secondAttribute="top" constant="10" id="Nog-bM-ngC"/>
+                                            <constraint firstItem="Tx2-nn-L8Z" firstAttribute="top" secondItem="Nap-29-IRB" secondAttribute="bottom" constant="10" id="bLU-f8-hnQ"/>
+                                            <constraint firstItem="Tx2-nn-L8Z" firstAttribute="leading" secondItem="Nap-29-IRB" secondAttribute="leading" id="dH2-gY-szJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tx2-nn-L8Z" secondAttribute="bottom" constant="10" id="ony-Kt-Jht"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QX3-UQ-S7z" firstAttribute="leading" secondItem="LWS-gi-zMF" secondAttribute="leading" id="Md3-4Z-dgv"/>
+                            <constraint firstAttribute="trailing" secondItem="QX3-UQ-S7z" secondAttribute="trailing" id="VWF-B0-6D0"/>
+                            <constraint firstItem="QX3-UQ-S7z" firstAttribute="top" secondItem="LWS-gi-zMF" secondAttribute="top" id="kw7-g3-bnK"/>
+                            <constraint firstAttribute="bottom" secondItem="QX3-UQ-S7z" secondAttribute="bottom" id="q3F-rY-Ni4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="optionButton" destination="f8T-lS-1yY" id="ps4-U4-oFf"/>
+                        <outlet property="propertyNameLabel" destination="Nap-29-IRB" id="ncu-Yc-zYY"/>
+                        <outlet property="stackView" destination="QX3-UQ-S7z" id="rEF-hX-oPR"/>
+                    </connections>
+                </viewController>
+                <customObject id="ucU-NO-fEp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="111"/>
+        </scene>
+    </scenes>
+</document>

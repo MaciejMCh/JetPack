@@ -28,6 +28,8 @@
 		C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7B1D9FD60D008ECCDD /* Transform.swift */; };
 		C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */; };
 		C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A811D9FD811008ECCDD /* Rotiation.swift */; };
+		C2DED2901DA09545007CEF44 /* OptionsEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */; };
+		C2DED2921DA09659007CEF44 /* OptionsEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */; };
 		C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F1C71DA04840007890DE /* CompoundViewController.swift */; };
 		C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
 		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
+		C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OptionsEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.storyboard; sourceTree = "<group>"; };
+		C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsEditorViewController.swift; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.swift; sourceTree = "<group>"; };
 		C2F0F1C71DA04840007890DE /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundViewController.swift; path = ModelsEditor/OSXDisplayers/CompoundViewController.swift; sourceTree = "<group>"; };
 		C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CompoundViewController.storyboard; path = ModelsEditor/OSXDisplayers/CompoundViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,8 +94,10 @@
 				C203D40D1DA03E68003DF46C /* TagEditorViewController.swift */,
 				C203D40E1DA03E68003DF46C /* Vector3EditorViewController.storyboard */,
 				C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */,
-				C2F0F1C71DA04840007890DE /* CompoundViewController.swift */,
 				C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */,
+				C2F0F1C71DA04840007890DE /* CompoundViewController.swift */,
+				C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */,
+				C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */,
 			);
 			name = OSXDisplayers;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 			files = (
 				C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */,
 				C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */,
+				C2DED2901DA09545007CEF44 /* OptionsEditorViewController.storyboard in Resources */,
 				C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */,
 				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
 				C203D4121DA03E68003DF46C /* Vector3EditorViewController.storyboard in Resources */,
@@ -303,6 +310,7 @@
 				C203D4111DA03E68003DF46C /* TagEditorViewController.swift in Sources */,
 				C2A34A731D9FD3B4008ECCDD /* Element.swift in Sources */,
 				C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */,
+				C2DED2921DA09659007CEF44 /* OptionsEditorViewController.swift in Sources */,
 				C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */,
 				C2A34A6B1D9FD0FB008ECCDD /* Visible.swift in Sources */,
 				C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */,

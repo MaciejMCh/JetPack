@@ -45,3 +45,13 @@ class Vector3: JetPrimitive {
     }
     
 }
+
+class EulerAngles: JetPrimitive {
+    typealias CPUType = (yaw: Scalar, pitch: Scalar, roll: Scalar)
+    
+    var value: CPUType
+    
+    init(value: CPUType = (yaw: Scalar(), pitch: Scalar(), roll: Scalar())) {
+        self.value = value
+    }
+}

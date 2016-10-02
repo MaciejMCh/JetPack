@@ -9,6 +9,7 @@
 import Foundation
 
 protocol EditableProperty {
+    var name: String {get}
     func updateValue()
 }
 

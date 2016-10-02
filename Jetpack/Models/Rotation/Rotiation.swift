@@ -13,9 +13,15 @@ protocol Rotation {
 }
 
 class AxesRotation: Rotation {
-    let x: Scalar = Scalar()
-    let y: Scalar = Scalar()
-    let z: Scalar = Scalar()
+    var axesRotationVector: Vector3 = Vector3()
+    
+    func rotationMatrix() -> Matrix4 {
+        return Matrix4()
+    }
+}
+
+class EulerRotiation: Rotation {
+    var eulerAngles: EulerAngles = EulerAngles()
     
     func rotationMatrix() -> Matrix4 {
         return Matrix4()

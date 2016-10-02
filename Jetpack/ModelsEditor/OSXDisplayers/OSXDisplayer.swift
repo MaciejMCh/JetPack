@@ -23,13 +23,20 @@ extension NSViewController: Displayer {
         return controller
     }
     
-    func tagPropertyEditorDisplayer(property: PrimitiveEditableProperty<Tag>) -> Displayer {
-        return TagEditorViewController.withTagProperty(tagProperty: property)
+    func editingDisplayer(editableProperty: EditableProperty) -> Displayer! {
+        if let modelProperty = editableProperty as? ModelEditableProperty {
+            return NSViewController().compoundDisplayer(displayers: modelProperty.model.properties.map{NSViewController().editingDisplayer(editableProperty: $0)})
+        }
+        if let optionsProperty = editableProperty as? OptionEditableProperty {
+            return OptionsEditorViewController.with(optionProperty: optionsProperty)
+        }
+        if let vecto3Property = editableProperty as? PrimitiveEditableProperty<Vector3> {
+            return Vector3EditorViewController.withProperty(vector3Property: vecto3Property)
+        }
+        if let tagProperty = editableProperty as? PrimitiveEditableProperty<Tag> {
+            return TagEditorViewController.withTagProperty(tagProperty: tagProperty)
+        }
+        assert(false, "not implemented for \(editableProperty)")
+        return nil
     }
-    
-    func vec3PropertyEditorDisplayer(property: PrimitiveEditableProperty<Vector3>) -> Displayer {
-        return Vector3EditorViewController.withProperty(vector3Property: property)
-    }
-    
-    
 }

@@ -20,3 +20,13 @@ class StaticTransformation: Transformation {
         return Matrix4()
     }
 }
+
+class DynamicTransformation: Transformation, EditableModel {
+    func transformationMatrix() -> Matrix4 {
+        return Matrix4()
+    }
+    
+    var properties: [EditableProperty] {
+        return []
+    }
+}

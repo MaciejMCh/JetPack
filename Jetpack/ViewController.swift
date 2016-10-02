@@ -16,15 +16,8 @@ class ViewController: NSViewController {
         ViewController.rootViewController = self
 
         let root = NSViewController().rootDisplayer()
-        let tagDisplay = root.tagPropertyEditorDisplayer(property: PrimitiveEditableProperty(name: "identifier", property: Tag(value: "node_0")))
-        let vecDisplay = root.vec3PropertyEditorDisplayer(property: PrimitiveEditableProperty(name: "position", property: Vector3()))
-        let compound = root.compoundDisplayer(displayers: [tagDisplay, vecDisplay])
-        
-        
-        ModelEditableProperty(name: "node", model: Node())
+        let nodeDisplayables = Node().properties.map{root.editingDisplayer(editableProperty: $0)}
+        let compound = root.compoundDisplayer(displayers: nodeDisplayables as! [Displayer])
         display(displayer: compound)
-        
-        view.layer?.backgroundColor = NSColor.red.cgColor
-        
     }
 }
