@@ -9,15 +9,15 @@
 import Foundation
 import Cocoa
 
-class OptionsEditorViewController: NSViewController {
+class OptionsEditorViewController: EditorViewController {
     
     static func with(optionProperty: OptionEditableProperty) -> OptionsEditorViewController {
-        let controller = NSStoryboard(name: "OptionsEditorViewController", bundle: nil).instantiateInitialController() as! OptionsEditorViewController
-        controller.optionEditableProperty = optionProperty
-        return controller
+        let me = NSStoryboard(name: "OptionsEditorViewController", bundle: nil).instantiateInitialController() as! OptionsEditorViewController
+        me.optionEditableProperty = optionProperty
+        me.property = optionProperty
+        return me
     }
     
-    @IBOutlet weak var propertyNameLabel: NSTextField!
     @IBOutlet weak var optionButton: NSPopUpButton!
     @IBOutlet weak var stackView: NSStackView!
     
@@ -26,7 +26,6 @@ class OptionsEditorViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        propertyNameLabel.stringValue = optionEditableProperty.name
         setupPopupButton()
     }
     
@@ -44,7 +43,8 @@ class OptionsEditorViewController: NSViewController {
         if let displayingView = displayingController?.view {
             stackView.removeView(displayingView)
         }
-        let controller = NSViewController().editingDisplayer(editableProperty: optionEditableProperty.options[optionButton.indexOfSelectedItem]) as! NSViewController
+        let controller = NSViewController().editingDisplayer(editableProperty: optionEditableProperty.options[optionButton.indexOfSelectedItem]) as! EditorViewController
+        controller.nestingLevel = nestingLevel + 1
         displayingController = controller
         stackView.addView(controller.view, in: .center)
     }

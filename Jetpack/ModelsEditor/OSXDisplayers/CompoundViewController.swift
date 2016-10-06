@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CompoundViewController: NSViewController {
+class CompoundViewController: EditorViewController {
     static func withComponents(components: [NSViewController]) -> CompoundViewController {
         let controller = NSStoryboard(name: "CompoundViewController", bundle: nil).instantiateInitialController() as! CompoundViewController
         controller.components = components
@@ -22,8 +22,16 @@ class CompoundViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         for component in components {
+            if let editor = component as? EditorViewController {
+                editor.nestingLevel = nestingLevel
+            }
             stackView.addView(component.view, in: .center)
         }
+        view.layer?.backgroundColor = NSColor.red.cgColor
+    }
+    
+    override func setupLeadingMarginConstraint() {
+//        leadingMarginConstraint.constant = CGFloat(10) * CGFloat(nestingLevel)
     }
     
 }

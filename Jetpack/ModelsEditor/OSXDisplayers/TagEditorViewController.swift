@@ -9,20 +9,15 @@
 import Foundation
 import Cocoa
 
-class TagEditorViewController: NSViewController {
+class TagEditorViewController: EditorViewController {
     static func withTagProperty(tagProperty: PrimitiveEditableProperty<Tag>) -> TagEditorViewController {
         let me = NSStoryboard(name: "TagEditorViewController", bundle: nil).instantiateInitialController() as! TagEditorViewController
         me.tagProperty = tagProperty
+        me.property = tagProperty
         return me
     }
     
-    @IBOutlet weak var propertyNameLabel: NSTextField!
     @IBOutlet weak var propertyValueTextField: NSTextField!
     
     var tagProperty: PrimitiveEditableProperty<Tag>!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        propertyNameLabel.stringValue = tagProperty.name
-    }
 }

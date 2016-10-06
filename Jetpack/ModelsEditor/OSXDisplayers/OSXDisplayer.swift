@@ -36,6 +36,9 @@ extension NSViewController: Displayer {
         if let tagProperty = editableProperty as? PrimitiveEditableProperty<Tag> {
             return TagEditorViewController.withTagProperty(tagProperty: tagProperty)
         }
+        if let eulerProperty = editableProperty as? PrimitiveEditableProperty<EulerAngles> {
+            return EulerEditorViewController.withEulerProperty(eulerProperty: eulerProperty)
+        }
         assert(false, "not implemented for \(editableProperty)")
         return nil
     }

@@ -14,15 +14,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hug-Gi-OZA">
-                                <rect key="frame" x="48" y="0.0" width="37" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="ZjS-Xe-EpU">
+                                <rect key="frame" x="8" y="0.0" width="94" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="ZjS-Xe-EpU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zHp-Oc-QWI">
-                                <rect key="frame" x="106" y="-3" width="294" height="22"/>
+                                <rect key="frame" x="110" y="-3" width="290" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="OQg-6j-uio">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -31,22 +31,24 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="zHp-Oc-QWI" firstAttribute="leading" secondItem="dec-qv-MbO" secondAttribute="leading" constant="110" id="ENl-8B-7Pw"/>
                             <constraint firstItem="Hug-Gi-OZA" firstAttribute="top" secondItem="dec-qv-MbO" secondAttribute="top" id="IOa-Zp-h7c"/>
-                            <constraint firstItem="Hug-Gi-OZA" firstAttribute="leading" secondItem="dec-qv-MbO" secondAttribute="leading" constant="50" id="Mvq-Rd-mMq"/>
+                            <constraint firstItem="Hug-Gi-OZA" firstAttribute="leading" secondItem="dec-qv-MbO" secondAttribute="leading" constant="10" id="Mvq-Rd-mMq"/>
                             <constraint firstAttribute="trailing" secondItem="zHp-Oc-QWI" secondAttribute="trailing" constant="50" id="VBg-Gx-zBG"/>
-                            <constraint firstItem="zHp-Oc-QWI" firstAttribute="leading" secondItem="Hug-Gi-OZA" secondAttribute="trailing" constant="23" id="Zh4-0G-cNU"/>
+                            <constraint firstItem="zHp-Oc-QWI" firstAttribute="leading" secondItem="Hug-Gi-OZA" secondAttribute="trailing" constant="10" id="YE2-Pw-SRS"/>
                             <constraint firstItem="zHp-Oc-QWI" firstAttribute="baseline" secondItem="Hug-Gi-OZA" secondAttribute="baseline" id="koz-1c-WI2"/>
                             <constraint firstAttribute="bottom" secondItem="Hug-Gi-OZA" secondAttribute="bottom" id="zK8-MA-1hk"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="propertyNameLabel" destination="Hug-Gi-OZA" id="zh9-8Y-wFu"/>
+                        <outlet property="leadingMarginConstraint" destination="ENl-8B-7Pw" id="h0w-0N-Suu"/>
+                        <outlet property="propertyNameLabel" destination="Hug-Gi-OZA" id="tcq-Hc-5wZ"/>
                         <outlet property="propertyValueTextField" destination="zHp-Oc-QWI" id="viP-5l-M41"/>
                     </connections>
                 </viewController>
                 <customObject id="YKa-rU-YmH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="143"/>
+            <point key="canvasLocation" x="50" y="142.5"/>
         </scene>
     </scenes>
 </document>

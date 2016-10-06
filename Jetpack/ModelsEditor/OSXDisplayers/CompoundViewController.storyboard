@@ -26,6 +26,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="leadingMarginConstraint" destination="EDV-Ds-KBm" id="t4M-ev-1yS"/>
                         <outlet property="stackView" destination="13U-zB-Ya2" id="3AD-Vl-OPi"/>
                     </connections>
                 </viewController>

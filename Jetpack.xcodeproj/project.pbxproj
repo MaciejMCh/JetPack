@@ -15,6 +15,9 @@
 		C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D4141DA03E80003DF46C /* OSXDisplayer.swift */; };
 		C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */; };
 		C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */; };
+		C27B242C1DA122FE009B270A /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242B1DA122FE009B270A /* EditorViewController.swift */; };
+		C27B242E1DA12A1F009B270A /* EulerEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */; };
+		C27B24301DA12A34009B270A /* EulerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */; };
 		C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */; };
 		C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */; };
 		C2A34A501D9FCA02008ECCDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A34A4F1D9FCA02008ECCDD /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		C203D4141DA03E80003DF46C /* OSXDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSXDisplayer.swift; path = ModelsEditor/OSXDisplayers/OSXDisplayer.swift; sourceTree = "<group>"; };
 		C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorInterface.swift; path = ModelsEditor/ModelsEditorInterface.swift; sourceTree = "<group>"; };
 		C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorConcretes.swift; path = ModelsEditor/ModelsEditorConcretes.swift; sourceTree = "<group>"; };
+		C27B242B1DA122FE009B270A /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = ModelsEditor/OSXDisplayers/EditorViewController.swift; sourceTree = "<group>"; };
+		C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EulerEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.storyboard; sourceTree = "<group>"; };
+		C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EulerEditorViewController.swift; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.swift; sourceTree = "<group>"; };
 		C2A34A481D9FCA02008ECCDD /* Jetpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jetpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A34A4B1D9FCA02008ECCDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A34A4D1D9FCA02008ECCDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C203D4141DA03E80003DF46C /* OSXDisplayer.swift */,
+				C27B242B1DA122FE009B270A /* EditorViewController.swift */,
 				C203D40C1DA03E68003DF46C /* TagEditorViewController.storyboard */,
 				C203D40D1DA03E68003DF46C /* TagEditorViewController.swift */,
 				C203D40E1DA03E68003DF46C /* Vector3EditorViewController.storyboard */,
@@ -98,6 +105,8 @@
 				C2F0F1C71DA04840007890DE /* CompoundViewController.swift */,
 				C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */,
 				C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */,
+				C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */,
+				C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */,
 			);
 			name = OSXDisplayers;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				C2A34A531D9FCA02008ECCDD /* Main.storyboard in Resources */,
 				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
 				C203D4121DA03E68003DF46C /* Vector3EditorViewController.storyboard in Resources */,
+				C27B242E1DA12A1F009B270A /* EulerEditorViewController.storyboard in Resources */,
 				C203D4101DA03E68003DF46C /* TagEditorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A34A671D9FD081008ECCDD /* Scene.swift in Sources */,
+				C27B24301DA12A34009B270A /* EulerEditorViewController.swift in Sources */,
 				C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */,
 				C203D4131DA03E68003DF46C /* Vector3EditorViewController.swift in Sources */,
 				C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */,
@@ -304,6 +315,7 @@
 				C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */,
 				C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */,
 				C203D40B1DA03AB1003DF46C /* ModelsEditorDisplayer.swift in Sources */,
+				C27B242C1DA122FE009B270A /* EditorViewController.swift in Sources */,
 				C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */,
 				C2A34A4C1D9FCA02008ECCDD /* AppDelegate.swift in Sources */,
 				C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */,
