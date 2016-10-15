@@ -1,22 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="I0p-J0-Sy9">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="L7T-Td-KQT">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Scene Editor View Controller-->
-        <scene sceneID="0o5-X2-eo7">
+        <scene sceneID="DCd-pG-9CU">
             <objects>
-                <viewController id="I0p-J0-Sy9" customClass="SceneEditorViewController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="Tpj-Z6-gCT">
+                <splitViewController id="L7T-Td-KQT" customClass="SceneEditorViewController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="5Pc-fE-kMr"/>
+                        <splitViewItem id="fOl-Ti-65V"/>
+                        <splitViewItem id="26H-fi-vDQ"/>
+                        <splitViewItem id="swd-XT-hUX"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="H8j-c5-xas">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="8aM-h4-rQx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                    </splitView>
+                    <connections>
+                        <segue destination="gtu-kv-QL7" kind="relationship" relationship="splitItems" id="9XS-ee-NKT"/>
+                        <segue destination="pom-8q-3fP" kind="relationship" relationship="splitItems" id="W6L-ri-PsS"/>
+                        <segue destination="JI9-aD-bVD" kind="relationship" relationship="splitItems" id="2vF-iQ-CVj"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="fbU-EK-AzI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="115"/>
+            <point key="canvasLocation" x="75" y="1136"/>
+        </scene>
+        <!--SceneContentBrowser-->
+        <scene sceneID="Dam-oI-IRo">
+            <objects>
+                <controllerPlaceholder storyboardName="SceneContentBrowser" id="gtu-kv-QL7" sceneMemberID="viewController"/>
+                <customObject id="1he-b0-0z6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="1037"/>
+        </scene>
+        <!--SceneViewer-->
+        <scene sceneID="dxn-5h-Xug">
+            <objects>
+                <controllerPlaceholder storyboardName="SceneViewer" id="pom-8q-3fP" sceneMemberID="viewController"/>
+                <customObject id="MHa-Zb-UPd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="1136"/>
+        </scene>
+        <!--NodeEditor-->
+        <scene sceneID="QLe-BH-lZz">
+            <objects>
+                <controllerPlaceholder storyboardName="NodeEditor" id="JI9-aD-bVD" sceneMemberID="viewController"/>
+                <customObject id="kZz-Oi-6av" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="1216"/>
         </scene>
     </scenes>
 </document>

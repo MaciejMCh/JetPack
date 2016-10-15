@@ -9,6 +9,11 @@
 import Foundation
 
 class Node {
-    var identity: Tag = Tag()
-    var element: Element = Element()
+    let identity: Tag
+    let element: Element
+    
+    init(identity: Tag = Tag(), element: Element = Element()) {
+        self.identity = identity
+        self.element = element
+    }
 }

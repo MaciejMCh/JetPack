@@ -27,7 +27,6 @@ class EditorViewController: NSViewController {
     }
     
     func setupLeadingMarginConstraint() {
-        debugPrint("\(nestingLevel)  \(self)")
         leadingMarginConstraint?.constant = CGFloat(100) + CGFloat(20 * nestingLevel)
     }
 }
