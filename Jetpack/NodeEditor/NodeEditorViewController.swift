@@ -9,7 +9,8 @@
 import Cocoa
 
 class NodeEditorViewController: NSViewController {
-    
+    @IBOutlet weak var scrollView: NSScrollView!
+    @IBOutlet weak var containerView: NSView!
     weak var currentlyPresentingViewController: NSViewController?
     
     func beginEditingNode(node: Node) {
@@ -26,8 +27,23 @@ class NodeEditorViewController: NSViewController {
     
     func presentNewViewController(viewController: NSViewController) {
         addChildViewController(viewController)
-        view.addSubview(viewController.view)
-        view.frame = CGRect(origin: CGPoint(), size: view.frame.size)
+        containerView.addSubview(viewController.view)
         currentlyPresentingViewController = viewController
+        
+        containerView.addConstraint(viewController.view.pinToParent(attribute: .top))
+        containerView.addConstraint(viewController.view.pinToParent(attribute: .leading))
+        containerView.addConstraint(viewController.view.pinToParent(attribute: .trailing))
+    }
+}
+
+extension NSView {
+    func pinToParent(attribute: NSLayoutAttribute) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: self,
+                                  attribute: attribute,
+                                  relatedBy: .equal,
+                                  toItem: superview,
+                                  attribute: attribute,
+                                  multiplier: 1,
+                                  constant: 0)
     }
 }

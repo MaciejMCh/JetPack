@@ -18,6 +18,17 @@ class TagEditorViewController: EditorViewController {
     }
     
     @IBOutlet weak var propertyValueTextField: NSTextField!
-    
     var tagProperty: PrimitiveEditableProperty<Tag>!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        propertyValueTextField.stringValue = tagProperty.value
+        propertyValueTextField.target = self
+        propertyValueTextField.action = #selector(textFieldChanged)
+    }
+    
+    func textFieldChanged() {
+        tagProperty.value = propertyValueTextField.stringValue
+        tagProperty.updateValue()
+    }
 }
