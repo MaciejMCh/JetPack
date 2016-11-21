@@ -42,6 +42,7 @@
 		C2E8ADB41DB12CF9002905DD /* SceneContentBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */; };
 		C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F1C71DA04840007890DE /* CompoundViewController.swift */; };
 		C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */; };
+		C2F624E61DC8B3BA00E65F98 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F624E51DC8B3BA00E65F98 /* Binding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneContentBrowser.storyboard; path = SceneEditor/SceneContentBrowser/SceneContentBrowser.storyboard; sourceTree = "<group>"; };
 		C2F0F1C71DA04840007890DE /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundViewController.swift; path = ModelsEditor/OSXDisplayers/CompoundViewController.swift; sourceTree = "<group>"; };
 		C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CompoundViewController.storyboard; path = ModelsEditor/OSXDisplayers/CompoundViewController.storyboard; sourceTree = "<group>"; };
+		C2F624E51DC8B3BA00E65F98 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Binding.swift; path = Binding/Binding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +151,18 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		C26098241DE3B60700495D45 /* JetpackCore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JetpackCore;
+			sourceTree = "<group>";
+		};
 		C2A34A3F1D9FCA02008ECCDD = {
 			isa = PBXGroup;
 			children = (
 				C2A34A4A1D9FCA02008ECCDD /* Jetpack */,
+				C26098241DE3B60700495D45 /* JetpackCore */,
 				C2A34A491D9FCA02008ECCDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -168,6 +178,7 @@
 		C2A34A4A1D9FCA02008ECCDD /* Jetpack */ = {
 			isa = PBXGroup;
 			children = (
+				C2F624E41DC8B35100E65F98 /* Binding */,
 				C25434971DB170640007416B /* Utilities */,
 				C25434901DB170130007416B /* User */,
 				C252CF281DA01AE900E1D288 /* ModelsEditor */,
@@ -282,6 +293,14 @@
 			name = SceneContentBrowser;
 			sourceTree = "<group>";
 		};
+		C2F624E41DC8B35100E65F98 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				C2F624E51DC8B3BA00E65F98 /* Binding.swift */,
+			);
+			name = Binding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,6 +390,7 @@
 				C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */,
 				C2A34A5F1D9FCD97008ECCDD /* SceneEditorViewController.swift in Sources */,
 				C2A34A4E1D9FCA02008ECCDD /* ViewController.swift in Sources */,
+				C2F624E61DC8B3BA00E65F98 /* Binding.swift in Sources */,
 				C203D40B1DA03AB1003DF46C /* ModelsEditorDisplayer.swift in Sources */,
 				C27B242C1DA122FE009B270A /* EditorViewController.swift in Sources */,
 				C2A34A6E1D9FD119008ECCDD /* Node.swift in Sources */,
