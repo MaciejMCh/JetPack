@@ -26,33 +26,31 @@ class SceneViewerViewController: NSViewController {
 }
 
 class JetpackCocoaOpenGlView: NSOpenGLView {
-    var renderingEntity: RenderingEntity!
-    var vertexArray = GLuint()
-    var gCubeVertexData: [GLfloat] = [0, 0, 0,
-                                      0, 1, 0,
-                                      1, 1, 0]
+    var renderer: Renderer?
+//    var vertexArray = GLuint()
+//    var gCubeVertexData: [GLfloat] = [0, 0, 0,
+//                                      0, 1, 0,
+//                                      1, 1, 0]
     
     override func prepareOpenGL() {
         super.prepareOpenGL()
         
-        loadShaders()
+//        renderer = Renderer(program: <#T##Program#>, renderingEntity: <#T##RenderingEntity#>)
         
-        
-//        glEnable(GLenum(GL_DEPTH_TEST))
-//        var vertexArray = GLuint()
-        glGenVertexArrays(1, &vertexArray)
-//        let error = glGetError()
-        glBindVertexArray(vertexArray)
-        
-        var vertexBuffer = GLuint()
-        glGenBuffers(1, &vertexBuffer)
-        glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
-        glBufferData(GLenum(GL_ARRAY_BUFFER), GLsizeiptr(MemoryLayout<GLfloat>.size * gCubeVertexData.count), &gCubeVertexData, GLenum(GL_STATIC_DRAW))
-        
-        glEnableVertexAttribArray(GLuint(0))
-        glVertexAttribPointer(GLuint(0), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 12, nil)
-        
-        glBindVertexArray(0)
+//        loadShaders()
+//        
+//        glGenVertexArrays(1, &vertexArray)
+//        glBindVertexArray(vertexArray)
+//        
+//        var vertexBuffer = GLuint()
+//        glGenBuffers(1, &vertexBuffer)
+//        glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
+//        glBufferData(GLenum(GL_ARRAY_BUFFER), GLsizeiptr(MemoryLayout<GLfloat>.size * gCubeVertexData.count), &gCubeVertexData, GLenum(GL_STATIC_DRAW))
+//        
+//        glEnableVertexAttribArray(GLuint(0))
+//        glVertexAttribPointer(GLuint(0), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 12, nil)
+//        
+//        glBindVertexArray(0)
         
     }
     
@@ -62,11 +60,11 @@ class JetpackCocoaOpenGlView: NSOpenGLView {
         
 //        Renderer().render(renderingEntity: renderingEntity)
         
-        glBindVertexArray(vertexArray)
-        glUseProgram(program)
-        
-        glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(3))
-        
+//        glBindVertexArray(vertexArray)
+//        glUseProgram(program)
+//        
+//        glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(3))
+//        
         glFlush()
         openGLContext?.flushBuffer()
     }

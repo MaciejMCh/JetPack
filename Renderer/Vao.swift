@@ -2,22 +2,29 @@
 //  Vao.swift
 //  Jetpack
 //
-//  Created by Maciej Chmielewski on 22.11.2016.
+//  Created by Maciej Chmielewski on 23.12.2016.
 //  Copyright © 2016 Maciej Chmielewski. All rights reserved.
 //
 
 import Foundation
 
-public protocol GpuMemoryAllocation {
+public struct Vao {
+    let gpuIdentity: GpuIdentity
+    
+    public init(gpuIdentity: GpuIdentity) {
+        self.gpuIdentity = gpuIdentity
+    }
+}
+
+protocol VaoAllocation {
     func draw()
 }
 
-public struct StaticDrawVao: GpuMemoryAllocation {
-    let identity: GpuIdentity
-    let indicesVbo: IndicesVbo
-    let dataVbo: Vbo
+
+struct WholeVaoAllocation: VaoAllocation {
+    let vao: Vao
     
-    public func draw() {
+    func draw() {
         
     }
 }

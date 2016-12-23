@@ -2,24 +2,31 @@
 //  Vertex.swift
 //  Jetpack
 //
-//  Created by Maciej Chmielewski on 22.11.2016.
+//  Created by Maciej Chmielewski on 23.12.2016.
 //  Copyright © 2016 Maciej Chmielewski. All rights reserved.
 //
 
 import Foundation
 
-public struct Vertex {
-    let data: [Attribute: [Float]]
-}
-
-extension Vertex {
-    public static func position(x: Float, y: Float, z: Float) -> Vertex {
-        return Vertex(data: [.Position: [x, y, z]])
+struct Vertex {
+    let attributeInterface: AttributeInterface
+    let data: [AttributeFace: [Float]]
+    
+    init?(data: [AttributeFace: [Float]]) {
+        if Vertex.validate(data: data) {
+            self.data = data
+            self.attributeInterface = AttributeInterface(attributes: Array(data.keys))
+        } else {
+            return nil
+        }
     }
-}
-
-extension Vertex {
-    func attributes() -> Set<Attribute> {
-        return Set<Attribute>(data.keys)
+    
+    private static func validate(data: [AttributeFace: [Float]]) -> Bool {
+        for attribute in data.keys {
+            if data[attribute]?.count != attribute.size() {
+                return false
+            }
+        }
+        return true
     }
 }

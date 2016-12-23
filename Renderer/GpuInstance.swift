@@ -1,5 +1,5 @@
 //
-//  GpuApi.swift
+//  GpuInstance.swift
 //  Jetpack
 //
 //  Created by Maciej Chmielewski on 23.12.2016.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol GpuApi {
-    func allocateVaoFromMesh(mesh: Mesh) -> Vao
+public protocol GpuIdentity {
+    
 }

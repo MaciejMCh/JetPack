@@ -14,6 +14,25 @@
 		C203D4131DA03E68003DF46C /* Vector3EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */; };
 		C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D4141DA03E80003DF46C /* OSXDisplayer.swift */; };
 		C2042EB71DA6EA15006561A6 /* SceneContentBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042EB61DA6EA15006561A6 /* SceneContentBrowserController.swift */; };
+		C21F96FB1E0DADA8001DC87D /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FA1E0DADA8001DC87D /* Attribute.swift */; };
+		C21F96FD1E0DAE20001DC87D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FC1E0DAE20001DC87D /* Mesh.swift */; };
+		C21F96FF1E0DB736001DC87D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FE1E0DB736001DC87D /* Vertex.swift */; };
+		C21F97011E0DB75B001DC87D /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97001E0DB75B001DC87D /* Primitive.swift */; };
+		C21F97031E0DB77C001DC87D /* Vao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97021E0DB77C001DC87D /* Vao.swift */; };
+		C21F97051E0DB78D001DC87D /* GpuInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97041E0DB78D001DC87D /* GpuInstance.swift */; };
+		C21F97071E0DB7E6001DC87D /* GpuApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97061E0DB7E6001DC87D /* GpuApi.swift */; };
+		C21F97091E0DBC8C001DC87D /* RenderingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97081E0DBC8C001DC87D /* RenderingEntity.swift */; };
+		C21F970B1E0DBCA2001DC87D /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F970A1E0DBCA2001DC87D /* Enviroment.swift */; };
+		C21F970D1E0DBCB5001DC87D /* ProcessingUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F970C1E0DBCB5001DC87D /* ProcessingUnion.swift */; };
+		C21F970F1E0DC15B001DC87D /* Uniform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F970E1E0DC15B001DC87D /* Uniform.swift */; };
+		C21F97111E0DC393001DC87D /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97101E0DC393001DC87D /* Program.swift */; };
+		C21F97131E0DC3CA001DC87D /* RenderFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97121E0DC3CA001DC87D /* RenderFunction.swift */; };
+		C21F97151E0DC790001DC87D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97141E0DC790001DC87D /* Renderer.swift */; };
+		C21F971F1E0DD1D9001DC87D /* OpenGlGpuApi.h in Headers */ = {isa = PBXBuildFile; fileRef = C21F971D1E0DD1D9001DC87D /* OpenGlGpuApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C21F97221E0DD1DA001DC87D /* OpenGlGpuApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */; };
+		C21F97231E0DD1DA001DC87D /* OpenGlGpuApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C21F97281E0DD1EB001DC87D /* OpenGlGpuApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */; };
+		C21F972A1E0DE84B001DC87D /* OpenGlProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */; };
 		C252CF2A1DA01AF700E1D288 /* ModelsEditorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */; };
 		C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */; };
 		C25434891DB16ACE0007416B /* SceneViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25434881DB16ACE0007416B /* SceneViewer.storyboard */; };
@@ -24,17 +43,6 @@
 		C26098371DE3B76400495D45 /* Renderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C26098351DE3B76400495D45 /* Renderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C260983A1DE3B76400495D45 /* Renderer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* Renderer.framework */; };
 		C260983B1DE3B76400495D45 /* Renderer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* Renderer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C26098411DE3B77F00495D45 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098401DE3B77F00495D45 /* Renderer.swift */; };
-		C26098431DE3B7D400495D45 /* RenderingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098421DE3B7D400495D45 /* RenderingEntity.swift */; };
-		C26098451DE3B81000495D45 /* GpuApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098441DE3B81000495D45 /* GpuApi.swift */; };
-		C26098471DE3B90900495D45 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098461DE3B90900495D45 /* Mesh.swift */; };
-		C26098491DE3B92100495D45 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098481DE3B92100495D45 /* Attribute.swift */; };
-		C260984B1DE3B97800495D45 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260984A1DE3B97800495D45 /* Enviroment.swift */; };
-		C260984D1DE3B99000495D45 /* EnviromentVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260984C1DE3B99000495D45 /* EnviromentVariable.swift */; };
-		C260984F1DE3BA1700495D45 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260984E1DE3BA1700495D45 /* Medium.swift */; };
-		C26098511DE3BA3A00495D45 /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098501DE3BA3A00495D45 /* Primitives.swift */; };
-		C26098531DE3BA6600495D45 /* Uniform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26098521DE3BA6600495D45 /* Uniform.swift */; };
-		C277A3851DEE3812002DE3D7 /* GpuActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C277A3841DEE3812002DE3D7 /* GpuActor.swift */; };
 		C27B242C1DA122FE009B270A /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242B1DA122FE009B270A /* EditorViewController.swift */; };
 		C27B242E1DA12A1F009B270A /* EulerEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */; };
 		C27B24301DA12A34009B270A /* EulerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */; };
@@ -55,9 +63,6 @@
 		C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A811D9FD811008ECCDD /* Rotiation.swift */; };
 		C2DED2901DA09545007CEF44 /* OptionsEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */; };
 		C2DED2921DA09659007CEF44 /* OptionsEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */; };
-		C2E730661DE4F73900A4B597 /* Vao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E730651DE4F73900A4B597 /* Vao.swift */; };
-		C2E730681DE4F74B00A4B597 /* Vbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E730671DE4F74B00A4B597 /* Vbo.swift */; };
-		C2E7306A1DE5035F00A4B597 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E730691DE5035F00A4B597 /* Vertex.swift */; };
 		C2E8ADB41DB12CF9002905DD /* SceneContentBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */; };
 		C2F0F1C91DA04840007890DE /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F0F1C71DA04840007890DE /* CompoundViewController.swift */; };
 		C2F0F1CC1DA0487A007890DE /* CompoundViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */; };
@@ -65,6 +70,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C21F97201E0DD1DA001DC87D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2A34A401D9FCA02008ECCDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C21F971A1E0DD1D9001DC87D;
+			remoteInfo = OpenGlGpuApi;
+		};
 		C26098381DE3B76400495D45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2A34A401D9FCA02008ECCDD /* Project object */;
@@ -82,6 +94,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C260983B1DE3B76400495D45 /* Renderer.framework in Embed Frameworks */,
+				C21F97231E0DD1DA001DC87D /* OpenGlGpuApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +109,25 @@
 		C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vector3EditorViewController.swift; path = ModelsEditor/OSXDisplayers/Vector3EditorViewController.swift; sourceTree = "<group>"; };
 		C203D4141DA03E80003DF46C /* OSXDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSXDisplayer.swift; path = ModelsEditor/OSXDisplayers/OSXDisplayer.swift; sourceTree = "<group>"; };
 		C2042EB61DA6EA15006561A6 /* SceneContentBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneContentBrowserController.swift; path = SceneEditor/SceneContentBrowserController.swift; sourceTree = "<group>"; };
+		C21F96FA1E0DADA8001DC87D /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		C21F96FC1E0DAE20001DC87D /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		C21F96FE1E0DB736001DC87D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		C21F97001E0DB75B001DC87D /* Primitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		C21F97021E0DB77C001DC87D /* Vao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vao.swift; sourceTree = "<group>"; };
+		C21F97041E0DB78D001DC87D /* GpuInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpuInstance.swift; sourceTree = "<group>"; };
+		C21F97061E0DB7E6001DC87D /* GpuApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpuApi.swift; sourceTree = "<group>"; };
+		C21F97081E0DBC8C001DC87D /* RenderingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderingEntity.swift; sourceTree = "<group>"; };
+		C21F970A1E0DBCA2001DC87D /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		C21F970C1E0DBCB5001DC87D /* ProcessingUnion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessingUnion.swift; sourceTree = "<group>"; };
+		C21F970E1E0DC15B001DC87D /* Uniform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniform.swift; sourceTree = "<group>"; };
+		C21F97101E0DC393001DC87D /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		C21F97121E0DC3CA001DC87D /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
+		C21F97141E0DC790001DC87D /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenGlGpuApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C21F971D1E0DD1D9001DC87D /* OpenGlGpuApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlGpuApi.h; sourceTree = "<group>"; };
+		C21F971E1E0DD1D9001DC87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlGpuApi.swift; sourceTree = "<group>"; };
+		C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlProgram.swift; sourceTree = "<group>"; };
 		C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorInterface.swift; path = ModelsEditor/ModelsEditorInterface.swift; sourceTree = "<group>"; };
 		C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorConcretes.swift; path = ModelsEditor/ModelsEditorConcretes.swift; sourceTree = "<group>"; };
 		C25434881DB16ACE0007416B /* SceneViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneViewer.storyboard; path = SceneEditor/SceneViewer/SceneViewer.storyboard; sourceTree = "<group>"; };
@@ -106,17 +138,6 @@
 		C26098331DE3B76400495D45 /* Renderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Renderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C26098351DE3B76400495D45 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		C26098361DE3B76400495D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C26098401DE3B77F00495D45 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		C26098421DE3B7D400495D45 /* RenderingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderingEntity.swift; sourceTree = "<group>"; };
-		C26098441DE3B81000495D45 /* GpuApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpuApi.swift; sourceTree = "<group>"; };
-		C26098461DE3B90900495D45 /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
-		C26098481DE3B92100495D45 /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
-		C260984A1DE3B97800495D45 /* Enviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
-		C260984C1DE3B99000495D45 /* EnviromentVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnviromentVariable.swift; sourceTree = "<group>"; };
-		C260984E1DE3BA1700495D45 /* Medium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medium.swift; sourceTree = "<group>"; };
-		C26098501DE3BA3A00495D45 /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Primitives.swift; sourceTree = "<group>"; };
-		C26098521DE3BA6600495D45 /* Uniform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniform.swift; sourceTree = "<group>"; };
-		C277A3841DEE3812002DE3D7 /* GpuActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpuActor.swift; sourceTree = "<group>"; };
 		C27B242B1DA122FE009B270A /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = ModelsEditor/OSXDisplayers/EditorViewController.swift; sourceTree = "<group>"; };
 		C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EulerEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.storyboard; sourceTree = "<group>"; };
 		C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EulerEditorViewController.swift; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.swift; sourceTree = "<group>"; };
@@ -139,9 +160,6 @@
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
 		C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OptionsEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsEditorViewController.swift; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.swift; sourceTree = "<group>"; };
-		C2E730651DE4F73900A4B597 /* Vao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vao.swift; sourceTree = "<group>"; };
-		C2E730671DE4F74B00A4B597 /* Vbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vbo.swift; sourceTree = "<group>"; };
-		C2E730691DE5035F00A4B597 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneContentBrowser.storyboard; path = SceneEditor/SceneContentBrowser/SceneContentBrowser.storyboard; sourceTree = "<group>"; };
 		C2F0F1C71DA04840007890DE /* CompoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompoundViewController.swift; path = ModelsEditor/OSXDisplayers/CompoundViewController.swift; sourceTree = "<group>"; };
 		C2F0F1CB1DA0487A007890DE /* CompoundViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CompoundViewController.storyboard; path = ModelsEditor/OSXDisplayers/CompoundViewController.storyboard; sourceTree = "<group>"; };
@@ -149,6 +167,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C21F97171E0DD1D9001DC87D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C260982F1DE3B76400495D45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,12 +186,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				C260983A1DE3B76400495D45 /* Renderer.framework in Frameworks */,
+				C21F97221E0DD1DA001DC87D /* OpenGlGpuApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21F971C1E0DD1D9001DC87D /* OpenGlGpuApi */ = {
+			isa = PBXGroup;
+			children = (
+				C21F971D1E0DD1D9001DC87D /* OpenGlGpuApi.h */,
+				C21F971E1E0DD1D9001DC87D /* Info.plist */,
+				C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */,
+				C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */,
+			);
+			path = OpenGlGpuApi;
+			sourceTree = "<group>";
+		};
 		C252CF281DA01AE900E1D288 /* ModelsEditor */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,20 +265,20 @@
 			children = (
 				C26098351DE3B76400495D45 /* Renderer.h */,
 				C26098361DE3B76400495D45 /* Info.plist */,
-				C26098401DE3B77F00495D45 /* Renderer.swift */,
-				C26098421DE3B7D400495D45 /* RenderingEntity.swift */,
-				C26098441DE3B81000495D45 /* GpuApi.swift */,
-				C26098461DE3B90900495D45 /* Mesh.swift */,
-				C26098481DE3B92100495D45 /* Attribute.swift */,
-				C260984A1DE3B97800495D45 /* Enviroment.swift */,
-				C260984C1DE3B99000495D45 /* EnviromentVariable.swift */,
-				C260984E1DE3BA1700495D45 /* Medium.swift */,
-				C26098501DE3BA3A00495D45 /* Primitives.swift */,
-				C26098521DE3BA6600495D45 /* Uniform.swift */,
-				C2E730651DE4F73900A4B597 /* Vao.swift */,
-				C2E730671DE4F74B00A4B597 /* Vbo.swift */,
-				C2E730691DE5035F00A4B597 /* Vertex.swift */,
-				C277A3841DEE3812002DE3D7 /* GpuActor.swift */,
+				C21F96FA1E0DADA8001DC87D /* Attribute.swift */,
+				C21F96FC1E0DAE20001DC87D /* Mesh.swift */,
+				C21F96FE1E0DB736001DC87D /* Vertex.swift */,
+				C21F97001E0DB75B001DC87D /* Primitive.swift */,
+				C21F97021E0DB77C001DC87D /* Vao.swift */,
+				C21F97041E0DB78D001DC87D /* GpuInstance.swift */,
+				C21F97061E0DB7E6001DC87D /* GpuApi.swift */,
+				C21F97081E0DBC8C001DC87D /* RenderingEntity.swift */,
+				C21F970A1E0DBCA2001DC87D /* Enviroment.swift */,
+				C21F970C1E0DBCB5001DC87D /* ProcessingUnion.swift */,
+				C21F970E1E0DC15B001DC87D /* Uniform.swift */,
+				C21F97101E0DC393001DC87D /* Program.swift */,
+				C21F97121E0DC3CA001DC87D /* RenderFunction.swift */,
+				C21F97141E0DC790001DC87D /* Renderer.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -251,6 +288,7 @@
 			children = (
 				C2A34A4A1D9FCA02008ECCDD /* Jetpack */,
 				C26098341DE3B76400495D45 /* Renderer */,
+				C21F971C1E0DD1D9001DC87D /* OpenGlGpuApi */,
 				C2A34A491D9FCA02008ECCDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -260,6 +298,7 @@
 			children = (
 				C2A34A481D9FCA02008ECCDD /* Jetpack.app */,
 				C26098331DE3B76400495D45 /* Renderer.framework */,
+				C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +432,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		C21F97181E0DD1D9001DC87D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21F971F1E0DD1D9001DC87D /* OpenGlGpuApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C26098301DE3B76400495D45 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +451,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C21F971A1E0DD1D9001DC87D /* OpenGlGpuApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C21F97241E0DD1DA001DC87D /* Build configuration list for PBXNativeTarget "OpenGlGpuApi" */;
+			buildPhases = (
+				C21F97161E0DD1D9001DC87D /* Sources */,
+				C21F97171E0DD1D9001DC87D /* Frameworks */,
+				C21F97181E0DD1D9001DC87D /* Headers */,
+				C21F97191E0DD1D9001DC87D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenGlGpuApi;
+			productName = OpenGlGpuApi;
+			productReference = C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		C26098321DE3B76400495D45 /* Renderer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "Renderer" */;
@@ -435,6 +500,7 @@
 			);
 			dependencies = (
 				C26098391DE3B76400495D45 /* PBXTargetDependency */,
+				C21F97211E0DD1DA001DC87D /* PBXTargetDependency */,
 			);
 			name = Jetpack;
 			productName = Jetpack;
@@ -451,6 +517,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Maciej Chmielewski";
 				TargetAttributes = {
+					C21F971A1E0DD1D9001DC87D = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
 					C26098321DE3B76400495D45 = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0810;
@@ -477,11 +548,19 @@
 			targets = (
 				C2A34A471D9FCA02008ECCDD /* Jetpack */,
 				C26098321DE3B76400495D45 /* Renderer */,
+				C21F971A1E0DD1D9001DC87D /* OpenGlGpuApi */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C21F97191E0DD1D9001DC87D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C26098311DE3B76400495D45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,24 +591,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C21F97161E0DD1D9001DC87D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C21F97281E0DD1EB001DC87D /* OpenGlGpuApi.swift in Sources */,
+				C21F972A1E0DE84B001DC87D /* OpenGlProgram.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C260982E1DE3B76400495D45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E730661DE4F73900A4B597 /* Vao.swift in Sources */,
-				C26098531DE3BA6600495D45 /* Uniform.swift in Sources */,
-				C260984F1DE3BA1700495D45 /* Medium.swift in Sources */,
-				C26098491DE3B92100495D45 /* Attribute.swift in Sources */,
-				C26098411DE3B77F00495D45 /* Renderer.swift in Sources */,
-				C260984B1DE3B97800495D45 /* Enviroment.swift in Sources */,
-				C26098431DE3B7D400495D45 /* RenderingEntity.swift in Sources */,
-				C2E7306A1DE5035F00A4B597 /* Vertex.swift in Sources */,
-				C260984D1DE3B99000495D45 /* EnviromentVariable.swift in Sources */,
-				C26098471DE3B90900495D45 /* Mesh.swift in Sources */,
-				C277A3851DEE3812002DE3D7 /* GpuActor.swift in Sources */,
-				C26098511DE3BA3A00495D45 /* Primitives.swift in Sources */,
-				C26098451DE3B81000495D45 /* GpuApi.swift in Sources */,
-				C2E730681DE4F74B00A4B597 /* Vbo.swift in Sources */,
+				C21F970F1E0DC15B001DC87D /* Uniform.swift in Sources */,
+				C21F97051E0DB78D001DC87D /* GpuInstance.swift in Sources */,
+				C21F97151E0DC790001DC87D /* Renderer.swift in Sources */,
+				C21F96FD1E0DAE20001DC87D /* Mesh.swift in Sources */,
+				C21F970B1E0DBCA2001DC87D /* Enviroment.swift in Sources */,
+				C21F96FF1E0DB736001DC87D /* Vertex.swift in Sources */,
+				C21F97031E0DB77C001DC87D /* Vao.swift in Sources */,
+				C21F96FB1E0DADA8001DC87D /* Attribute.swift in Sources */,
+				C21F97071E0DB7E6001DC87D /* GpuApi.swift in Sources */,
+				C21F97131E0DC3CA001DC87D /* RenderFunction.swift in Sources */,
+				C21F970D1E0DBCB5001DC87D /* ProcessingUnion.swift in Sources */,
+				C21F97111E0DC393001DC87D /* Program.swift in Sources */,
+				C21F97011E0DB75B001DC87D /* Primitive.swift in Sources */,
+				C21F97091E0DBC8C001DC87D /* RenderingEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +656,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C21F97211E0DD1DA001DC87D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C21F971A1E0DD1D9001DC87D /* OpenGlGpuApi */;
+			targetProxy = C21F97201E0DD1DA001DC87D /* PBXContainerItemProxy */;
+		};
 		C26098391DE3B76400495D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C26098321DE3B76400495D45 /* Renderer */;
@@ -587,6 +680,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C21F97251E0DD1DA001DC87D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = OpenGlGpuApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mch.OpenGlGpuApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C21F97261E0DD1DA001DC87D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = OpenGlGpuApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mch.OpenGlGpuApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C260983D1DE3B76400495D45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -759,6 +901,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C21F97241E0DD1DA001DC87D /* Build configuration list for PBXNativeTarget "OpenGlGpuApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C21F97251E0DD1DA001DC87D /* Debug */,
+				C21F97261E0DD1DA001DC87D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "Renderer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
