@@ -14,10 +14,20 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Renderer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C26098221DE3B60700495D45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C26098321DE3B76400495D45</key>
 		<dict>
 			<key>primary</key>
 			<true/>

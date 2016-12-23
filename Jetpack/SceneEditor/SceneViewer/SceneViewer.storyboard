@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A322" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="VWr-p9-rso">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A322" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="VWr-p9-rso">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Scene Viewer View Controller-->
@@ -12,7 +13,21 @@
                     <view key="view" id="ISJ-hw-puv">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLp-LU-oWw" customClass="JetpackCocoaOpenGlView" customModule="Jetpack" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            </openGLView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KLp-LU-oWw" firstAttribute="top" secondItem="ISJ-hw-puv" secondAttribute="top" id="D14-87-Gqc"/>
+                            <constraint firstItem="KLp-LU-oWw" firstAttribute="leading" secondItem="ISJ-hw-puv" secondAttribute="leading" id="aPr-ws-ps1"/>
+                            <constraint firstAttribute="trailing" secondItem="KLp-LU-oWw" secondAttribute="trailing" id="oYw-30-kCl"/>
+                            <constraint firstAttribute="bottom" secondItem="KLp-LU-oWw" secondAttribute="bottom" id="qbg-td-YMD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="openGlView" destination="KLp-LU-oWw" id="ICM-d9-iUJ"/>
+                    </connections>
                 </viewController>
                 <customObject id="Sv4-es-Jrt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
