@@ -20,7 +20,7 @@ extension OpenGlGpuApi {
         var indicesVboGLName = GLuint()
         glGenBuffers(1, &indicesVboGLName)
         glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), indicesVboGLName)
-        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), indicesBuffer.count * GLsizeiptr(MemoryLayout<GLuint>.size), indicesBuffer, GLenum(GL_STATIC_DRAW))
+        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), indicesBuffer.size(), indicesBuffer, GLenum(GL_STATIC_DRAW))
         
         // Create data vbo
         let dataBuffer = mesh.bufferData().map{GLfloat($0)}
@@ -38,8 +38,11 @@ extension OpenGlGpuApi {
         var index = 0
         for attribute in mesh.attributeInterface.attributes {
             glEnableVertexAttribArray(GLuint(0))
-            glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, &offsetPointer)
-            
+            if offsetPointer == 0 {
+                glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, nil)
+            } else {
+                glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, &offsetPointer)
+            }
             offsetPointer += attribute.size() * floatSize
             index += 1
         }
@@ -51,9 +54,13 @@ extension OpenGlGpuApi {
     public func wholeVaoAllocation(vao: Vao) -> WholeVaoAllocation {
         return WholeVaoAllocation(vao: vao) {
             glBindVertexArray((vao.gpuIdentity as! OpenGlGpuIdentity).openGlName)
-            glBindBuffer(GLenum(GL_ARRAY_BUFFER), (vao.dataVboGpuIdentity as! OpenGlGpuIdentity).openGlName)
-            glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(3))
-//            glDrawElements(GLenum(GL_TRIANGLES), GLsizei(vao.dataCount), GLenum(GL_UNSIGNED_INT), nil)
+            glDrawElements(GLenum(GL_TRIANGLES), GLsizei(vao.dataCount), GLenum(GL_UNSIGNED_INT), nil)
         }
+    }
+}
+
+extension Array {
+    func size () -> Int {
+        return self.count * MemoryLayout.size(ofValue: self[0])
     }
 }
