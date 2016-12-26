@@ -11,4 +11,9 @@ import Foundation
 public struct RenderingEntity {
     let vaoAllocation: VaoAllocation
     let enviroment: Enviroment
+    
+    public init(vaoAllocation: VaoAllocation, enviroment: Enviroment) {
+        self.vaoAllocation = vaoAllocation
+        self.enviroment = enviroment
+    }
 }

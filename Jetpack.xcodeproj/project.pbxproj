@@ -61,6 +61,7 @@
 		C2A34A7C1D9FD60D008ECCDD /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7B1D9FD60D008ECCDD /* Transform.swift */; };
 		C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */; };
 		C2A34A821D9FD811008ECCDD /* Rotiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A34A811D9FD811008ECCDD /* Rotiation.swift */; };
+		C2D795841E1069E400CD8F4A /* OpenGlVao.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D795831E1069E400CD8F4A /* OpenGlVao.swift */; };
 		C2DED2901DA09545007CEF44 /* OptionsEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */; };
 		C2DED2921DA09659007CEF44 /* OptionsEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */; };
 		C2E8ADB41DB12CF9002905DD /* SceneContentBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */; };
@@ -78,6 +79,13 @@
 			remoteInfo = OpenGlGpuApi;
 		};
 		C26098381DE3B76400495D45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2A34A401D9FCA02008ECCDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C26098321DE3B76400495D45;
+			remoteInfo = Renderer;
+		};
+		C2D795811E1059D900CD8F4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2A34A401D9FCA02008ECCDD /* Project object */;
 			proxyType = 1;
@@ -158,6 +166,7 @@
 		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
 		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
+		C2D795831E1069E400CD8F4A /* OpenGlVao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlVao.swift; sourceTree = "<group>"; };
 		C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OptionsEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsEditorViewController.swift; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.swift; sourceTree = "<group>"; };
 		C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneContentBrowser.storyboard; path = SceneEditor/SceneContentBrowser/SceneContentBrowser.storyboard; sourceTree = "<group>"; };
@@ -200,6 +209,7 @@
 				C21F971E1E0DD1D9001DC87D /* Info.plist */,
 				C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */,
 				C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */,
+				C2D795831E1069E400CD8F4A /* OpenGlVao.swift */,
 			);
 			path = OpenGlGpuApi;
 			sourceTree = "<group>";
@@ -463,6 +473,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C2D795821E1059D900CD8F4A /* PBXTargetDependency */,
 			);
 			name = OpenGlGpuApi;
 			productName = OpenGlGpuApi;
@@ -596,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C21F97281E0DD1EB001DC87D /* OpenGlGpuApi.swift in Sources */,
+				C2D795841E1069E400CD8F4A /* OpenGlVao.swift in Sources */,
 				C21F972A1E0DE84B001DC87D /* OpenGlProgram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +677,11 @@
 			isa = PBXTargetDependency;
 			target = C26098321DE3B76400495D45 /* Renderer */;
 			targetProxy = C26098381DE3B76400495D45 /* PBXContainerItemProxy */;
+		};
+		C2D795821E1059D900CD8F4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C26098321DE3B76400495D45 /* Renderer */;
+			targetProxy = C2D795811E1059D900CD8F4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -908,6 +925,7 @@
 				C21F97261E0DD1DA001DC87D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "Renderer" */ = {
 			isa = XCConfigurationList;

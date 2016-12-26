@@ -10,10 +10,13 @@ import Foundation
 
 public struct Uniform: Hashable {
     let face: UniformFace
+    let location: UniformLocation
+    
     public let hashValue: Int
     
-    init(face: UniformFace) {
+    public init(face: UniformFace, location: UniformLocation) {
         self.face = face
+        self.location = location
         self.hashValue = face.hashValue
     }
     
@@ -22,11 +25,15 @@ public struct Uniform: Hashable {
     }
 }
 
-struct UniformFace: Equatable, Hashable {
-    let name: String
+public protocol UniformLocation {
+    
+}
+
+public struct UniformFace: Equatable, Hashable {
+    public let name: String
     let type: Primitive
     
-    let hashValue: Int
+    public let hashValue: Int
     
     init(name: String, type: Primitive) {
         self.name = name
@@ -34,7 +41,7 @@ struct UniformFace: Equatable, Hashable {
         self.hashValue = (type.name + "_" + self.name).hashValue
     }
     
-    static func ==(lhs: UniformFace, rhs: UniformFace) -> Bool {
+    public static func ==(lhs: UniformFace, rhs: UniformFace) -> Bool {
         if lhs.name != rhs.name {
             return false
         }
@@ -43,6 +50,10 @@ struct UniformFace: Equatable, Hashable {
     
 }
 
-struct UniformInterface {
-    let uniformFaces: Set<UniformFace>
+public struct UniformInterface {
+    public let uniformFaces: Set<UniformFace>
+    
+    public init(uniformFaces: Set<UniformFace>) {
+        self.uniformFaces = uniformFaces
+    }
 }

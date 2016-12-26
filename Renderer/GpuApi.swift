@@ -9,5 +9,7 @@
 import Foundation
 
 public protocol GpuApi {
-    func allocateVaoFromMesh(mesh: Mesh) -> Vao
+    func allocateVaoFromMesh(mesh: Mesh) -> Vao?
+    func compileProgramFromRenderFunction(renderFunction: RenderFunction) -> Program?
+    func wholeVaoAllocation(vao: Vao) -> WholeVaoAllocation
 }

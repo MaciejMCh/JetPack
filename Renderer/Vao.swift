@@ -9,22 +9,37 @@
 import Foundation
 
 public struct Vao {
-    let gpuIdentity: GpuIdentity
+    public let gpuIdentity: GpuIdentity
+    public let dataVboGpuIdentity: GpuIdentity
+    public let dataCount: Int
+    let attributeInterface: AttributeInterface
     
-    public init(gpuIdentity: GpuIdentity) {
+    public init(gpuIdentity: GpuIdentity, dataVboGpuIdentity: GpuIdentity, dataCount: Int, attributeInterface: AttributeInterface) {
         self.gpuIdentity = gpuIdentity
+        self.dataVboGpuIdentity = dataVboGpuIdentity
+        self.dataCount = dataCount
+        self.attributeInterface = attributeInterface
     }
 }
 
-protocol VaoAllocation {
+public protocol VaoAllocation {
+    var attributeInterface: AttributeInterface {get}
     func draw()
 }
 
 
-struct WholeVaoAllocation: VaoAllocation {
+public struct WholeVaoAllocation: VaoAllocation {
     let vao: Vao
+    let drawFunction: () -> ()
+    public let attributeInterface: AttributeInterface
     
-    func draw() {
-        
+    public init(vao: Vao, drawFunction: @escaping () -> ()) {
+        self.vao = vao
+        self.drawFunction = drawFunction
+        self.attributeInterface = vao.attributeInterface
+    }
+    
+    public func draw() {
+        drawFunction()
     }
 }

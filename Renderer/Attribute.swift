@@ -22,22 +22,12 @@ public enum AttributeFace {
     }
 }
 
-public struct Attribute: Equatable, Hashable {
-    let attributeFace: AttributeFace
-    public let hashValue: Int
-    
-    init(attributeFace: AttributeFace) {
-        self.attributeFace = attributeFace
-        self.hashValue = attributeFace.hashValue
-    }
-    
-    public static func ==(lhs: Attribute, rhs: Attribute) -> Bool {
-        return lhs.hashValue == rhs.hashValue
-    }
-}
-
 public struct AttributeInterface {
     public let attributes: [AttributeFace]
+    
+    public init(attributes: [AttributeFace]) {
+        self.attributes = attributes
+    }
     
     func conformsToInterface(attributeInterface: AttributeInterface) -> Bool {
         return attributes == attributeInterface.attributes

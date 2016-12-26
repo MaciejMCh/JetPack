@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Enviroment {
+public struct Enviroment {
     let processingUnions: [ProcessingUnion]
+    
+    public init(processingUnions: [ProcessingUnion]) {
+        self.processingUnions = processingUnions
+    }
     
     func pass() {
         for processingUnion in processingUnions {

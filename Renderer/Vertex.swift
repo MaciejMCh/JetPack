@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Vertex {
+public struct Vertex {
     let attributeInterface: AttributeInterface
     let data: [AttributeFace: [Float]]
     
-    init?(data: [AttributeFace: [Float]]) {
+    public init?(data: [AttributeFace: [Float]]) {
         if Vertex.validate(data: data) {
             self.data = data
             self.attributeInterface = AttributeInterface(attributes: Array(data.keys))

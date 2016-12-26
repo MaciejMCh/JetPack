@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ProcessingUnion {
+public struct ProcessingUnion {
     private let updater: () -> ()
     
     init<T: Primitive>(primitiveGetter: @escaping () -> (T)) {

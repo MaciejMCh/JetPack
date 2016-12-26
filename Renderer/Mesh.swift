@@ -13,7 +13,7 @@ public struct Mesh {
     let vertices: [Vertex]
     public let indices: [UInt]
     
-    init?(vertices: [Vertex], indices: [UInt]) {
+    public init?(vertices: [Vertex], indices: [UInt]) {
         if Mesh.validate(vertices: vertices, indices: indices) {
             self.vertices = vertices
             self.indices = indices

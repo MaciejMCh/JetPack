@@ -10,16 +10,18 @@ import Foundation
 
 public struct Program {
     let gpuIdentity: GpuIdentity
-    let attributes: Set<Attribute>
+    let attributeInterface: AttributeInterface
     let uniforms: Set<Uniform>
+    let useFunction: () -> ()
     
-    public init(gpuIdentity: GpuIdentity, attributes: Set<Attribute>, uniforms: Set<Uniform>) {
+    public init(gpuIdentity: GpuIdentity, attributeInterface: AttributeInterface, uniforms: Set<Uniform>, useFunction: @escaping () -> ()) {
         self.gpuIdentity = gpuIdentity
-        self.attributes = attributes
+        self.attributeInterface = attributeInterface
         self.uniforms = uniforms
+        self.useFunction = useFunction
     }
     
     public func use() {
-        
+        useFunction()
     }
 }
