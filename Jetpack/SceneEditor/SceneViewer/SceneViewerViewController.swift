@@ -28,10 +28,11 @@ class SceneViewerViewController: NSViewController {
 
 class JetpackCocoaOpenGlView: NSOpenGLView {
     var renderer: Renderer?
-//    var vertexArray = GLuint()
-//    var gCubeVertexData: [GLfloat] = [0, 0, 0,
-//                                      0, 1, 0,
-//                                      1, 1, 0]
+    var vertexArray = GLuint()
+    var gCubeVertexData: [GLfloat] = [0, 0, 0,
+                                      0, 1, 0,
+                                      1, 1, 0]
+    var indices: [GLuint] = [0, 1, 2]
     
     override func prepareOpenGL() {
         super.prepareOpenGL()
@@ -54,20 +55,26 @@ class JetpackCocoaOpenGlView: NSOpenGLView {
 
 
         
-//        loadShaders()
-//        
-//        glGenVertexArrays(1, &vertexArray)
-//        glBindVertexArray(vertexArray)
-//        
-//        var vertexBuffer = GLuint()
-//        glGenBuffers(1, &vertexBuffer)
-//        glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
-//        glBufferData(GLenum(GL_ARRAY_BUFFER), GLsizeiptr(MemoryLayout<GLfloat>.size * gCubeVertexData.count), &gCubeVertexData, GLenum(GL_STATIC_DRAW))
-//        
-//        glEnableVertexAttribArray(GLuint(0))
-//        glVertexAttribPointer(GLuint(0), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 12, nil)
-//        
-//        glBindVertexArray(0)
+        loadShaders()
+        
+        glGenVertexArrays(1, &vertexArray)
+        glBindVertexArray(vertexArray)
+        
+        var indicesVboGLName: GLuint = 0
+        glGenBuffers(1, &indicesVboGLName)
+        glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), indicesVboGLName)
+        glBufferData(GLenum(GL_ELEMENT_ARRAY_BUFFER), indices.size(), indices, GLenum(GL_STATIC_DRAW))
+        
+        
+        var vertexBuffer = GLuint()
+        glGenBuffers(1, &vertexBuffer)
+        glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
+        glBufferData(GLenum(GL_ARRAY_BUFFER), GLsizeiptr(MemoryLayout<GLfloat>.size * gCubeVertexData.count), &gCubeVertexData, GLenum(GL_STATIC_DRAW))
+        
+        glEnableVertexAttribArray(GLuint(0))
+        glVertexAttribPointer(GLuint(0), 3, GLenum(GL_FLOAT), GLboolean(GL_FALSE), 12, nil)
+        
+        glBindVertexArray(0)
         
     }
     
@@ -75,14 +82,15 @@ class JetpackCocoaOpenGlView: NSOpenGLView {
         glClear(GLbitfield(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT))
         glClearColor(0, 1, 0, 1)
         
-        renderer!.render()
+//        renderer!.render()
 //        Renderer().render(renderingEntity: renderingEntity)
         
-//        glBindVertexArray(vertexArray)
-//        glUseProgram(program)
-//        
+        glBindVertexArray(vertexArray)
+        glUseProgram(program)
+        
 //        glDrawArrays(GLenum(GL_TRIANGLES), 0, GLsizei(3))
-//        
+        glDrawElements(GLenum(GL_TRIANGLES), GLsizei(3), GLenum(GL_UNSIGNED_INT), nil);
+
         glFlush()
         openGLContext?.flushBuffer()
     }
@@ -266,4 +274,10 @@ func validateProgram(prog: GLuint) -> Bool {
         returnVal = false
     }
     return returnVal
+}
+
+extension Array {
+    func size () -> Int {
+        return self.count * MemoryLayout.size(ofValue: self[0])
+    }
 }
