@@ -27,7 +27,6 @@ public protocol VaoAllocation {
     func draw()
 }
 
-
 public struct WholeVaoAllocation: VaoAllocation {
     let vao: Vao
     let drawFunction: () -> ()

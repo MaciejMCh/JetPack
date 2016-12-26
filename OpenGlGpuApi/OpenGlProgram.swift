@@ -20,7 +20,7 @@ extension OpenGlGpuApi {
             }
         }
         
-        guard let programGlName = OpenGlProgramCompiler().compileProgram(vsCode: renderFunction.shaderCode.vertexShaderCode, fsCode: renderFunction.shaderCode.fragmentShaderCode, uniformLocator: uniformLocator) else {
+        guard let programGlName = OpenGlProgramCompiler().compileProgram(vsCode: renderFunction.shaderImplementation.vertexShaderCode, fsCode: renderFunction.shaderImplementation.fragmentShaderCode, uniformLocator: uniformLocator) else {
             return nil
         }
         

@@ -11,21 +11,21 @@ import Foundation
 public struct RenderFunction {
     public let attributeInterface: AttributeInterface
     public let uniformInterface: UniformInterface
-    public let shaderCode: ShaderCode
+    public let shaderImplementation: ShaderImplementation
     
-    public init(attributeInterface: AttributeInterface, uniformInterface: UniformInterface, shaderCode: ShaderCode) {
+    public init(attributeInterface: AttributeInterface, uniformInterface: UniformInterface, shaderImplementation: ShaderImplementation) {
         self.attributeInterface = attributeInterface
         self.uniformInterface = uniformInterface
-        self.shaderCode = shaderCode
+        self.shaderImplementation = shaderImplementation
     }
 }
 
-public protocol ShaderCode {
+public protocol ShaderImplementation {
     var vertexShaderCode: String {get}
     var fragmentShaderCode: String {get}
 }
 
-public struct ResourceShaderCode: ShaderCode {
+public struct ResourceShaderCode: ShaderImplementation {
     public let vertexShaderCode: String
     public let fragmentShaderCode: String
     

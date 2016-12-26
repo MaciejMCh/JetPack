@@ -40,7 +40,7 @@ class JetpackCocoaOpenGlView: NSOpenGLView {
         let attributeInterface = AttributeInterface(attributes: [.Position])
         let uniformInterface = UniformInterface(uniformFaces: [])
         let shaderCode = ResourceShaderCode(resourceName: "Shader")
-        let renderFunction = RenderFunction(attributeInterface: attributeInterface, uniformInterface: uniformInterface, shaderCode: shaderCode)
+        let renderFunction = RenderFunction(attributeInterface: attributeInterface, uniformInterface: uniformInterface, shaderImplementation: shaderCode)
         let program = gpuApi.compileProgramFromRenderFunction(renderFunction: renderFunction)!
         renderer = Renderer(program: program, renderingEntity: renderingEntity)
     }
