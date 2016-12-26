@@ -29,9 +29,9 @@ class JetpackCocoaOpenGlView: NSOpenGLView {
         super.prepareOpenGL()
         let gpuApi = OpenGlGpuApi()
         
-        let v1 = Vertex(data: [.Position: [0, 0, 0]])!
-        let v2 = Vertex(data: [.Position: [0, 1, 0]])!
-        let v3 = Vertex(data: [.Position: [1, 1, 0]])!
+        let v1 = Vertex(data: [.Position: [0, 0, 0], .Texel: [0, 0]])!
+        let v2 = Vertex(data: [.Position: [0, 1, 0], .Texel: [0.5, 0.5]])!
+        let v3 = Vertex(data: [.Position: [1, 1, 0], .Texel: [1, 1]])!
         let mesh = Mesh(vertices: [v1, v2, v3], indices: [0, 1, 2])!
         let vao = gpuApi.allocateVaoFromMesh(mesh: mesh)!
         let vaoAllocation = gpuApi.wholeVaoAllocation(vao: vao)

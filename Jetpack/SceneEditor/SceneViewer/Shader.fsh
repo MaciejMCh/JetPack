@@ -2,7 +2,8 @@
 
 out vec4 colorOut;
 
-void main()
-{
-    colorOut = vec4(1.0, 0.0, 0.0, 1.0);
+in vec3 iColor;
+
+void main() {
+    colorOut = vec4(iColor , 1.0);
 }

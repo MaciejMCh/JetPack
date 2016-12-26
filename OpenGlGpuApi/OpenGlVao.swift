@@ -37,12 +37,8 @@ extension OpenGlGpuApi {
         var offsetPointer = 0
         var index = 0
         for attribute in mesh.attributeInterface.attributes {
-            glEnableVertexAttribArray(GLuint(0))
-            if offsetPointer == 0 {
-                glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, nil)
-            } else {
-                glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, &offsetPointer)
-            }
+            glEnableVertexAttribArray(GLuint(index))
+            glVertexAttribPointer(GLuint(index), GLint(attribute.size()), GLenum(GL_FLOAT), GLboolean(GL_FALSE), vertexSize, UnsafeRawPointer(bitPattern: offsetPointer))
             offsetPointer += attribute.size() * floatSize
             index += 1
         }
