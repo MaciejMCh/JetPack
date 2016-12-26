@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Renderer
+import CoreModel
 
 extension OpenGlGpuApi {
     public func compileProgramFromRenderFunction(renderFunction: RenderFunction) -> Program? {

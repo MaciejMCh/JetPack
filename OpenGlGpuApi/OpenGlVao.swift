@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Renderer
+import CoreModel
 
 extension OpenGlGpuApi {
     public func allocateVaoFromMesh(mesh: Mesh) -> Vao? {

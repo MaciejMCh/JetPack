@@ -11,7 +11,7 @@ import OpenGL
 import GLKit
 import OpenGlGpuApi
 
-import Renderer
+import CoreModel
 
 class SceneViewerViewController: NSViewController {
     @IBOutlet weak var openGlView: JetpackCocoaOpenGlView!

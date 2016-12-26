@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Renderer
+import CoreModel
 import GLKit
 
 struct OpenGlGpuIdentity: GpuIdentity {

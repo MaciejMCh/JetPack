@@ -40,9 +40,9 @@
 		C254348D1DB16C790007416B /* NodeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254348C1DB16C790007416B /* NodeEditorViewController.swift */; };
 		C254348F1DB16CA20007416B /* SceneViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254348E1DB16CA20007416B /* SceneViewerViewController.swift */; };
 		C25434991DB170AA0007416B /* ArrayUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25434981DB170AA0007416B /* ArrayUtilities.swift */; };
-		C26098371DE3B76400495D45 /* Renderer.h in Headers */ = {isa = PBXBuildFile; fileRef = C26098351DE3B76400495D45 /* Renderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C260983A1DE3B76400495D45 /* Renderer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* Renderer.framework */; };
-		C260983B1DE3B76400495D45 /* Renderer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* Renderer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C26098371DE3B76400495D45 /* CoreModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C26098351DE3B76400495D45 /* CoreModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C260983A1DE3B76400495D45 /* CoreModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* CoreModel.framework */; };
+		C260983B1DE3B76400495D45 /* CoreModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* CoreModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C27B242C1DA122FE009B270A /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242B1DA122FE009B270A /* EditorViewController.swift */; };
 		C27B242E1DA12A1F009B270A /* EulerEditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */; };
 		C27B24301DA12A34009B270A /* EulerEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */; };
@@ -101,7 +101,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C260983B1DE3B76400495D45 /* Renderer.framework in Embed Frameworks */,
+				C260983B1DE3B76400495D45 /* CoreModel.framework in Embed Frameworks */,
 				C21F97231E0DD1DA001DC87D /* OpenGlGpuApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -130,12 +130,12 @@
 		C21F970E1E0DC15B001DC87D /* Uniform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uniform.swift; sourceTree = "<group>"; };
 		C21F97101E0DC393001DC87D /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		C21F97121E0DC3CA001DC87D /* RenderFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderFunction.swift; sourceTree = "<group>"; };
-		C21F97141E0DC790001DC87D /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		C21F97141E0DC790001DC87D /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Renderer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenGlGpuApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21F971D1E0DD1D9001DC87D /* OpenGlGpuApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGlGpuApi.h; sourceTree = "<group>"; };
 		C21F971E1E0DD1D9001DC87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlGpuApi.swift; sourceTree = "<group>"; };
-		C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlProgram.swift; sourceTree = "<group>"; };
+		C21F97271E0DD1EB001DC87D /* OpenGlGpuApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OpenGlGpuApi.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C21F97291E0DE84B001DC87D /* OpenGlProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OpenGlProgram.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C252CF291DA01AF700E1D288 /* ModelsEditorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorInterface.swift; path = ModelsEditor/ModelsEditorInterface.swift; sourceTree = "<group>"; };
 		C252CF2B1DA01B0800E1D288 /* ModelsEditorConcretes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelsEditorConcretes.swift; path = ModelsEditor/ModelsEditorConcretes.swift; sourceTree = "<group>"; };
 		C25434881DB16ACE0007416B /* SceneViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneViewer.storyboard; path = SceneEditor/SceneViewer/SceneViewer.storyboard; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 		C254348C1DB16C790007416B /* NodeEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeEditorViewController.swift; path = NodeEditor/NodeEditorViewController.swift; sourceTree = "<group>"; };
 		C254348E1DB16CA20007416B /* SceneViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneViewerViewController.swift; path = SceneEditor/SceneViewer/SceneViewerViewController.swift; sourceTree = "<group>"; };
 		C25434981DB170AA0007416B /* ArrayUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayUtilities.swift; path = Utilities/ArrayUtilities.swift; sourceTree = "<group>"; };
-		C26098331DE3B76400495D45 /* Renderer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Renderer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C26098351DE3B76400495D45 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		C26098331DE3B76400495D45 /* CoreModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C26098351DE3B76400495D45 /* CoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CoreModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C26098361DE3B76400495D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C27B242B1DA122FE009B270A /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = ModelsEditor/OSXDisplayers/EditorViewController.swift; sourceTree = "<group>"; };
 		C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EulerEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.storyboard; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
 		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
-		C2D795831E1069E400CD8F4A /* OpenGlVao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenGlVao.swift; sourceTree = "<group>"; };
+		C2D795831E1069E400CD8F4A /* OpenGlVao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OpenGlVao.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OptionsEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsEditorViewController.swift; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.swift; sourceTree = "<group>"; };
 		C2E8ADB31DB12CF9002905DD /* SceneContentBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SceneContentBrowser.storyboard; path = SceneEditor/SceneContentBrowser/SceneContentBrowser.storyboard; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C260983A1DE3B76400495D45 /* Renderer.framework in Frameworks */,
+				C260983A1DE3B76400495D45 /* CoreModel.framework in Frameworks */,
 				C21F97221E0DD1DA001DC87D /* OpenGlGpuApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +270,10 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		C26098341DE3B76400495D45 /* Renderer */ = {
+		C26098341DE3B76400495D45 /* CodeModel */ = {
 			isa = PBXGroup;
 			children = (
-				C26098351DE3B76400495D45 /* Renderer.h */,
+				C26098351DE3B76400495D45 /* CoreModel.h */,
 				C26098361DE3B76400495D45 /* Info.plist */,
 				C21F96FA1E0DADA8001DC87D /* Attribute.swift */,
 				C21F96FC1E0DAE20001DC87D /* Mesh.swift */,
@@ -290,6 +290,7 @@
 				C21F97121E0DC3CA001DC87D /* RenderFunction.swift */,
 				C21F97141E0DC790001DC87D /* Renderer.swift */,
 			);
+			name = CodeModel;
 			path = Renderer;
 			sourceTree = "<group>";
 		};
@@ -297,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A34A4A1D9FCA02008ECCDD /* Jetpack */,
-				C26098341DE3B76400495D45 /* Renderer */,
+				C26098341DE3B76400495D45 /* CodeModel */,
 				C21F971C1E0DD1D9001DC87D /* OpenGlGpuApi */,
 				C2A34A491D9FCA02008ECCDD /* Products */,
 			);
@@ -307,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A34A481D9FCA02008ECCDD /* Jetpack.app */,
-				C26098331DE3B76400495D45 /* Renderer.framework */,
+				C26098331DE3B76400495D45 /* CoreModel.framework */,
 				C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */,
 			);
 			name = Products;
@@ -454,7 +455,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C26098371DE3B76400495D45 /* Renderer.h in Headers */,
+				C26098371DE3B76400495D45 /* CoreModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,9 +481,9 @@
 			productReference = C21F971B1E0DD1D9001DC87D /* OpenGlGpuApi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C26098321DE3B76400495D45 /* Renderer */ = {
+		C26098321DE3B76400495D45 /* CoreModel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "Renderer" */;
+			buildConfigurationList = C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "CoreModel" */;
 			buildPhases = (
 				C260982E1DE3B76400495D45 /* Sources */,
 				C260982F1DE3B76400495D45 /* Frameworks */,
@@ -493,9 +494,9 @@
 			);
 			dependencies = (
 			);
-			name = Renderer;
+			name = CoreModel;
 			productName = Renderer;
-			productReference = C26098331DE3B76400495D45 /* Renderer.framework */;
+			productReference = C26098331DE3B76400495D45 /* CoreModel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C2A34A471D9FCA02008ECCDD /* Jetpack */ = {
@@ -558,7 +559,7 @@
 			projectRoot = "";
 			targets = (
 				C2A34A471D9FCA02008ECCDD /* Jetpack */,
-				C26098321DE3B76400495D45 /* Renderer */,
+				C26098321DE3B76400495D45 /* CoreModel */,
 				C21F971A1E0DD1D9001DC87D /* OpenGlGpuApi */,
 			);
 		};
@@ -675,12 +676,12 @@
 		};
 		C26098391DE3B76400495D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C26098321DE3B76400495D45 /* Renderer */;
+			target = C26098321DE3B76400495D45 /* CoreModel */;
 			targetProxy = C26098381DE3B76400495D45 /* PBXContainerItemProxy */;
 		};
 		C2D795821E1059D900CD8F4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C26098321DE3B76400495D45 /* Renderer */;
+			target = C26098321DE3B76400495D45 /* CoreModel */;
 			targetProxy = C2D795811E1059D900CD8F4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -927,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "Renderer" */ = {
+		C260983C1DE3B76400495D45 /* Build configuration list for PBXNativeTarget "CoreModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C260983D1DE3B76400495D45 /* Debug */,
