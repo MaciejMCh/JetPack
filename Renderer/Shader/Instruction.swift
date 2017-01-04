@@ -54,3 +54,7 @@ struct Assignment<T>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
 }
+
+struct Declaration<T>: Instruction {
+    let variable: Variable<T>
+}

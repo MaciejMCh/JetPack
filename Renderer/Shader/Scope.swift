@@ -8,15 +8,17 @@
 
 import Foundation
 
+// There is `segmentation fault 11` without these declarations
+let bugv3: Variable<Vec<SizeOf3>>? = nil
+let bugm4: Variable<Mat<SizeOf4>>? = nil
+
 struct Scope {
     let instructions: [Instruction]
 }
 
 // MARK: Basic samples
 struct Scopes {
-    static func LambertFactorScope() -> Scope {
-        let bug: Variable<Vec<SizeOf3>>?
-
+    static func lambertFactor() -> Scope {
         let surfaceNormalVersor: Variable<Vec3> = Variable(name: "surfaceNormalVersor")
         let surfaceToLightVersor: Variable<Vec3> = Variable(name: "surfaceToLightVersor")
         let lambertFactor: Variable<Scalar> = Variable(name: "lambertFactor")
@@ -25,5 +27,18 @@ struct Scopes {
         let assignment = Assignment(variable: lambertFactor, evaluation: dotProduct)
         
         return Scope(instructions: [assignment])
+    }
+    
+    static func vertexShaderDeclarations(attributeInterface: AttributeInterface) -> Scope {
+        var declarations: [Instruction] = []
+        for attributeFace in attributeInterface.attributes {
+            switch attributeFace.size() {
+            case 2: declarations.append(Declaration<Vec2>(variable: Variable(name: attributeFace.name())))
+            case 3: declarations.append(Declaration<Vec3>(variable: Variable(name: attributeFace.name())))
+            case 4: declarations.append(Declaration<Vec4>(variable: Variable(name: attributeFace.name())))
+            default: break
+            }
+        }
+        return Scope(instructions: declarations)
     }
 }

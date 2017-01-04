@@ -20,6 +20,14 @@ public enum AttributeFace {
         case .Normal: return 3
         }
     }
+    
+    func name() -> String {
+        switch self {
+        case .Position: return "position"
+        case .Texel: return "texel"
+        case .Normal: return "normal"
+        }
+    }
 }
 
 public struct AttributeInterface {

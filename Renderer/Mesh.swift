@@ -58,6 +58,9 @@ public extension Mesh {
 
 extension Array {
     static func +<T>(lhs: [T], rhs: [T]) -> [T] {
-        return []
+        var product: [T] = []
+        product.append(contentsOf: lhs)
+        product.append(contentsOf: rhs)
+        return product
     }
 }
