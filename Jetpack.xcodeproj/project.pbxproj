@@ -40,6 +40,10 @@
 		C254348D1DB16C790007416B /* NodeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254348C1DB16C790007416B /* NodeEditorViewController.swift */; };
 		C254348F1DB16CA20007416B /* SceneViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254348E1DB16CA20007416B /* SceneViewerViewController.swift */; };
 		C25434991DB170AA0007416B /* ArrayUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25434981DB170AA0007416B /* ArrayUtilities.swift */; };
+		C25B21C01E145C66005D0BFC /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBE72E1E11DC6100225C8D /* Scope.swift */; };
+		C25B21C11E145C66005D0BFC /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBE7301E11DC7500225C8D /* Variable.swift */; };
+		C25B21C21E145C66005D0BFC /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBE7321E11DC9500225C8D /* Instruction.swift */; };
+		C25B21C31E145C66005D0BFC /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27C165D1E144D2100659B08 /* Evaluation.swift */; };
 		C26098371DE3B76400495D45 /* CoreModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C26098351DE3B76400495D45 /* CoreModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C260983A1DE3B76400495D45 /* CoreModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* CoreModel.framework */; };
 		C260983B1DE3B76400495D45 /* CoreModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C26098331DE3B76400495D45 /* CoreModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -149,6 +153,7 @@
 		C27B242B1DA122FE009B270A /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorViewController.swift; path = ModelsEditor/OSXDisplayers/EditorViewController.swift; sourceTree = "<group>"; };
 		C27B242D1DA12A1F009B270A /* EulerEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EulerEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.storyboard; sourceTree = "<group>"; };
 		C27B242F1DA12A34009B270A /* EulerEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EulerEditorViewController.swift; path = ModelsEditor/OSXDisplayers/EulerEditorViewController.swift; sourceTree = "<group>"; };
+		C27C165D1E144D2100659B08 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		C2869A911E0C84C7004B4458 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = SceneEditor/SceneViewer/Shader.fsh; sourceTree = "<group>"; };
 		C2869A921E0C84C7004B4458 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = SceneEditor/SceneViewer/Shader.vsh; sourceTree = "<group>"; };
 		C2A34A481D9FCA02008ECCDD /* Jetpack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jetpack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +171,9 @@
 		C2A34A7B1D9FD60D008ECCDD /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Models/Transform/Transform.swift; sourceTree = "<group>"; };
 		C2A34A7E1D9FD6B5008ECCDD /* Primitives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Primitives.swift; path = Models/Primitives/Primitives.swift; sourceTree = "<group>"; };
 		C2A34A811D9FD811008ECCDD /* Rotiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rotiation.swift; path = Models/Rotation/Rotiation.swift; sourceTree = "<group>"; };
+		C2BBE72E1E11DC6100225C8D /* Scope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scope.swift; path = Shader/Scope.swift; sourceTree = "<group>"; };
+		C2BBE7301E11DC7500225C8D /* Variable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Variable.swift; path = Shader/Variable.swift; sourceTree = "<group>"; };
+		C2BBE7321E11DC9500225C8D /* Instruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Instruction.swift; path = Shader/Instruction.swift; sourceTree = "<group>"; };
 		C2D795831E1069E400CD8F4A /* OpenGlVao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OpenGlVao.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C2DED28F1DA09545007CEF44 /* OptionsEditorViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = OptionsEditorViewController.storyboard; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.storyboard; sourceTree = "<group>"; };
 		C2DED2911DA09659007CEF44 /* OptionsEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsEditorViewController.swift; path = ModelsEditor/OSXDisplayers/OptionsEditorViewController.swift; sourceTree = "<group>"; };
@@ -270,9 +278,10 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		C26098341DE3B76400495D45 /* CodeModel */ = {
+		C26098341DE3B76400495D45 /* CoreModel */ = {
 			isa = PBXGroup;
 			children = (
+				C2BBE72D1E11DC1200225C8D /* Shader */,
 				C26098351DE3B76400495D45 /* CoreModel.h */,
 				C26098361DE3B76400495D45 /* Info.plist */,
 				C21F96FA1E0DADA8001DC87D /* Attribute.swift */,
@@ -290,7 +299,7 @@
 				C21F97121E0DC3CA001DC87D /* RenderFunction.swift */,
 				C21F97141E0DC790001DC87D /* Renderer.swift */,
 			);
-			name = CodeModel;
+			name = CoreModel;
 			path = Renderer;
 			sourceTree = "<group>";
 		};
@@ -298,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A34A4A1D9FCA02008ECCDD /* Jetpack */,
-				C26098341DE3B76400495D45 /* CodeModel */,
+				C26098341DE3B76400495D45 /* CoreModel */,
 				C21F971C1E0DD1D9001DC87D /* OpenGlGpuApi */,
 				C2A34A491D9FCA02008ECCDD /* Products */,
 			);
@@ -421,6 +430,17 @@
 				C2A34A811D9FD811008ECCDD /* Rotiation.swift */,
 			);
 			name = Rotation;
+			sourceTree = "<group>";
+		};
+		C2BBE72D1E11DC1200225C8D /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				C2BBE72E1E11DC6100225C8D /* Scope.swift */,
+				C2BBE7301E11DC7500225C8D /* Variable.swift */,
+				C2BBE7321E11DC9500225C8D /* Instruction.swift */,
+				C27C165D1E144D2100659B08 /* Evaluation.swift */,
+			);
+			name = Shader;
 			sourceTree = "<group>";
 		};
 		C2E8ADB21DB12CDB002905DD /* SceneContentBrowser */ = {
@@ -621,16 +641,20 @@
 				C21F97051E0DB78D001DC87D /* GpuInstance.swift in Sources */,
 				C21F97151E0DC790001DC87D /* Renderer.swift in Sources */,
 				C21F96FD1E0DAE20001DC87D /* Mesh.swift in Sources */,
+				C25B21C01E145C66005D0BFC /* Scope.swift in Sources */,
 				C21F970B1E0DBCA2001DC87D /* Enviroment.swift in Sources */,
 				C21F96FF1E0DB736001DC87D /* Vertex.swift in Sources */,
 				C21F97031E0DB77C001DC87D /* Vao.swift in Sources */,
 				C21F96FB1E0DADA8001DC87D /* Attribute.swift in Sources */,
+				C25B21C31E145C66005D0BFC /* Evaluation.swift in Sources */,
 				C21F97071E0DB7E6001DC87D /* GpuApi.swift in Sources */,
 				C21F97131E0DC3CA001DC87D /* RenderFunction.swift in Sources */,
 				C21F970D1E0DBCB5001DC87D /* ProcessingUnion.swift in Sources */,
 				C21F97111E0DC393001DC87D /* Program.swift in Sources */,
 				C21F97011E0DB75B001DC87D /* Primitive.swift in Sources */,
 				C21F97091E0DBC8C001DC87D /* RenderingEntity.swift in Sources */,
+				C25B21C21E145C66005D0BFC /* Instruction.swift in Sources */,
+				C25B21C11E145C66005D0BFC /* Variable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
