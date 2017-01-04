@@ -50,7 +50,7 @@ class InfixOperation<Lhs, Rhs, Result>: Evaluation<Result> {
     }
 }
 
-struct Assignment<T> {
+struct Assignment<T>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
 }

@@ -20,4 +20,8 @@ struct AlgebraicPrimitiveOperations {
     static func scalarMultiplication<RowSize: AlgebraicPrimitiveSize, ColSize: AlgebraicPrimitiveSize>(primitive: Evaluation<AlgebraicPrimitive<RowSize, ColSize>>, scalar: Evaluation<AlgebraicPrimitive<SizeOf1, SizeOf1>>) -> InfixOperation<AlgebraicPrimitive<RowSize, ColSize>, AlgebraicPrimitive<SizeOf1, SizeOf1>, AlgebraicPrimitive<RowSize, ColSize>> {
         return InfixOperation(operatorSymbol: "*", lhs: primitive, rhs: scalar)
     }
+    
+    static func dotProduct<VectorSize: AlgebraicPrimitiveSize>(lhs: Evaluation<AlgebraicPrimitive<SizeOf1, VectorSize>>, rhs: Evaluation<AlgebraicPrimitive<SizeOf1, VectorSize>>) -> InfixOperation<AlgebraicPrimitive<SizeOf1, VectorSize>, AlgebraicPrimitive<SizeOf1, VectorSize>, AlgebraicPrimitive<SizeOf1, SizeOf1>> {
+        return InfixOperation(operatorSymbol: "∙", lhs: lhs, rhs: rhs)
+    }
 }
