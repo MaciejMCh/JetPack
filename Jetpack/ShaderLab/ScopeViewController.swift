@@ -17,7 +17,10 @@ protocol StoryboardInstance {
 
 extension StoryboardInstance where Self: NSViewController {
     static func instantiate() -> Self {
-        return NSStoryboard(name: Self.storyboardName, bundle: nil).instantiateController(withIdentifier: Self.storyboardIdentifier) as! Self
+        let storyboard = NSStoryboard(name: Self.storyboardName, bundle: nil)
+        let controller = storyboard.instantiateController(withIdentifier: Self.storyboardIdentifier) as! Self
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        return controller
     }
 }
 
