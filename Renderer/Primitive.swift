@@ -10,20 +10,42 @@ import Foundation
 
 public protocol Primitive {
     var name: String {get}
+    init()
 }
 
-public protocol AlgebraicPrimitiveSize {}
-public struct SizeOf1: AlgebraicPrimitiveSize {}
-public struct SizeOf2: AlgebraicPrimitiveSize {}
-public struct SizeOf3: AlgebraicPrimitiveSize {}
-public struct SizeOf4: AlgebraicPrimitiveSize {}
+public protocol AlgebraicPrimitiveSize {
+    static var size: UInt {get}
+}
+public struct SizeOf1: AlgebraicPrimitiveSize {
+    public static let size: UInt = 1
+}
+public struct SizeOf2: AlgebraicPrimitiveSize {
+    public static let size: UInt = 2
+}
+public struct SizeOf3: AlgebraicPrimitiveSize {
+    public static let size: UInt = 3
+}
+public struct SizeOf4: AlgebraicPrimitiveSize {
+    public static let size: UInt = 4
+}
 
 public class AlgebraicPrimitive<RowSize: AlgebraicPrimitiveSize, ColSize: AlgebraicPrimitiveSize>: Primitive {
-    public let name: String
-    
-    public init() {
-        self.name = "xDD"
+    public var name: String {
+        if RowSize.size == 1 {
+            if ColSize.size == 1 {
+                return "scalar"
+            }
+            return "vec\(ColSize.size)"
+        }
+        
+        if RowSize.size == ColSize.size {
+            return "mat\(ColSize.size)"
+        }
+        
+        return "mat\(RowSize.size)x\(ColSize.size)"
     }
+    
+    public required init() {}
 }
 
 public typealias Scalar = AlgebraicPrimitive<SizeOf1, SizeOf1>

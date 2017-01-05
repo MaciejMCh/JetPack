@@ -33,18 +33,15 @@ class ScopeViewController: NSViewController {
         super.viewDidLoad()
         
         view.wantsLayer = true
-        view.layer!.backgroundColor = NSColor.red.cgColor
+        view.layer!.borderWidth = 1
+        view.layer!.borderColor = NSColor.black.cgColor
         
         for instruction in scope.instructions {
             for variable in instruction.variablesUsed() {
                 let variableView = VariableView.instantiate()
                 variableView.nameLabel.stringValue = variable.name
+                variableView.typeLabel.stringValue = variable.type.name
                 stackView.addView(variableView, in: .bottom)
-                
-//                let textField = NSTextField()
-//                textField.isEditable = false
-//                textField.stringValue = variable.name
-//                stackView.addView(textField, in: .bottom)
             }
         }
     }

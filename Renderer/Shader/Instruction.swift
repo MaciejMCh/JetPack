@@ -16,7 +16,7 @@ protocol AnyEvaluation: Instruction {
     
 }
 
-class Evaluation<T>: AnyEvaluation {
+class Evaluation<T: Primitive>: AnyEvaluation {
     func variablesUsed() -> [AnyVariable] {
         return []
     }
@@ -24,13 +24,16 @@ class Evaluation<T>: AnyEvaluation {
 
 public protocol AnyVariable {
     var name: String {get}
+    var type: Primitive {get}
 }
 
-class Variable<T>: Evaluation<T>, AnyVariable {
+class Variable<T: Primitive>: Evaluation<T>, AnyVariable {
     let name: String
+    let type: Primitive
     
     init(name: String) {
         self.name = name
+        self.type = T()
     }
     
     override func variablesUsed() -> [AnyVariable] {
@@ -38,7 +41,7 @@ class Variable<T>: Evaluation<T>, AnyVariable {
     }
 }
 
-class Function<T>: Evaluation<T> {
+class Function<T: Primitive>: Evaluation<T> {
     let signature: String
     let arguments: [AnyEvaluation]
     
@@ -48,7 +51,7 @@ class Function<T>: Evaluation<T> {
     }
 }
 
-class InfixOperation<Lhs, Rhs, Result>: Evaluation<Result> {
+class InfixOperation<Lhs: Primitive, Rhs: Primitive, Result: Primitive>: Evaluation<Result> {
     let operatorSymbol: String
     let lhs: Evaluation<Lhs>
     let rhs: Evaluation<Rhs>
@@ -64,7 +67,7 @@ class InfixOperation<Lhs, Rhs, Result>: Evaluation<Result> {
     }
 }
 
-struct Assignment<T>: Instruction {
+struct Assignment<T: Primitive>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
     
@@ -73,7 +76,7 @@ struct Assignment<T>: Instruction {
     }
 }
 
-struct Declaration<T>: Instruction {
+struct Declaration<T: Primitive>: Instruction {
     let variable: Variable<T>
     
     func variablesUsed() -> [AnyVariable] {
