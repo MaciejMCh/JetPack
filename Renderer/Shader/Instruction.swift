@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Instruction {
+public protocol Instruction {
     
 }
 

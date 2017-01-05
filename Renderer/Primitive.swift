@@ -8,32 +8,32 @@
 
 import Foundation
 
-protocol Primitive {
+public protocol Primitive {
     var name: String {get}
 }
 
-protocol AlgebraicPrimitiveSize {}
-struct SizeOf1: AlgebraicPrimitiveSize {}
-struct SizeOf2: AlgebraicPrimitiveSize {}
-struct SizeOf3: AlgebraicPrimitiveSize {}
-struct SizeOf4: AlgebraicPrimitiveSize {}
+public protocol AlgebraicPrimitiveSize {}
+public struct SizeOf1: AlgebraicPrimitiveSize {}
+public struct SizeOf2: AlgebraicPrimitiveSize {}
+public struct SizeOf3: AlgebraicPrimitiveSize {}
+public struct SizeOf4: AlgebraicPrimitiveSize {}
 
-class AlgebraicPrimitive<RowSize: AlgebraicPrimitiveSize, ColSize: AlgebraicPrimitiveSize>: Primitive {
-    let name: String
+public class AlgebraicPrimitive<RowSize: AlgebraicPrimitiveSize, ColSize: AlgebraicPrimitiveSize>: Primitive {
+    public let name: String
     
-    init(name: String) {
-        self.name = name
+    public init() {
+        self.name = "xDD"
     }
 }
 
-typealias Scalar = AlgebraicPrimitive<SizeOf1, SizeOf1>
+public typealias Scalar = AlgebraicPrimitive<SizeOf1, SizeOf1>
 
-typealias Vec<Size: AlgebraicPrimitiveSize> = AlgebraicPrimitive<SizeOf1, Size>
-typealias Vec2 = Vec<SizeOf2>
-typealias Vec3 = Vec<SizeOf3>
-typealias Vec4 = Vec<SizeOf4>
+public typealias Vec<Size: AlgebraicPrimitiveSize> = AlgebraicPrimitive<SizeOf1, Size>
+public typealias Vec2 = Vec<SizeOf2>
+public typealias Vec3 = Vec<SizeOf3>
+public typealias Vec4 = Vec<SizeOf4>
 
-typealias Mat<Size: AlgebraicPrimitiveSize> = AlgebraicPrimitive<Size, Size>
-typealias Mat2 = Mat<SizeOf2>
-typealias Mat3 = Mat<SizeOf3>
-typealias Mat4 = Mat<SizeOf4>
+public typealias Mat<Size: AlgebraicPrimitiveSize> = AlgebraicPrimitive<Size, Size>
+public typealias Mat2 = Mat<SizeOf2>
+public typealias Mat3 = Mat<SizeOf3>
+public typealias Mat4 = Mat<SizeOf4>

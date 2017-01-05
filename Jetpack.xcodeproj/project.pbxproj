@@ -14,6 +14,9 @@
 		C203D4131DA03E68003DF46C /* Vector3EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */; };
 		C203D4151DA03E80003DF46C /* OSXDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C203D4141DA03E80003DF46C /* OSXDisplayer.swift */; };
 		C2042EB71DA6EA15006561A6 /* SceneContentBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2042EB61DA6EA15006561A6 /* SceneContentBrowserController.swift */; };
+		C20E98A01E1D5FFD008C1764 /* ShaderLab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20E989F1E1D5FFD008C1764 /* ShaderLab.storyboard */; };
+		C20E98A21E1D6072008C1764 /* ShaderLabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E98A11E1D6072008C1764 /* ShaderLabViewController.swift */; };
+		C20E98A41E1D6613008C1764 /* ScopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20E98A31E1D6613008C1764 /* ScopeViewController.swift */; };
 		C21F96FB1E0DADA8001DC87D /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FA1E0DADA8001DC87D /* Attribute.swift */; };
 		C21F96FD1E0DAE20001DC87D /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FC1E0DAE20001DC87D /* Mesh.swift */; };
 		C21F96FF1E0DB736001DC87D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F96FE1E0DB736001DC87D /* Vertex.swift */; };
@@ -121,6 +124,9 @@
 		C203D40F1DA03E68003DF46C /* Vector3EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vector3EditorViewController.swift; path = ModelsEditor/OSXDisplayers/Vector3EditorViewController.swift; sourceTree = "<group>"; };
 		C203D4141DA03E80003DF46C /* OSXDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OSXDisplayer.swift; path = ModelsEditor/OSXDisplayers/OSXDisplayer.swift; sourceTree = "<group>"; };
 		C2042EB61DA6EA15006561A6 /* SceneContentBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneContentBrowserController.swift; path = SceneEditor/SceneContentBrowserController.swift; sourceTree = "<group>"; };
+		C20E989F1E1D5FFD008C1764 /* ShaderLab.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ShaderLab.storyboard; path = ShaderLab/ShaderLab.storyboard; sourceTree = "<group>"; };
+		C20E98A11E1D6072008C1764 /* ShaderLabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShaderLabViewController.swift; path = ShaderLab/ShaderLabViewController.swift; sourceTree = "<group>"; };
+		C20E98A31E1D6613008C1764 /* ScopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScopeViewController.swift; path = ShaderLab/ScopeViewController.swift; sourceTree = "<group>"; };
 		C21F96FA1E0DADA8001DC87D /* Attribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		C21F96FC1E0DAE20001DC87D /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
 		C21F96FE1E0DB736001DC87D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
@@ -210,6 +216,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20E989E1E1D5F83008C1764 /* ShaderLab */ = {
+			isa = PBXGroup;
+			children = (
+				C20E989F1E1D5FFD008C1764 /* ShaderLab.storyboard */,
+				C20E98A11E1D6072008C1764 /* ShaderLabViewController.swift */,
+				C20E98A31E1D6613008C1764 /* ScopeViewController.swift */,
+			);
+			name = ShaderLab;
+			sourceTree = "<group>";
+		};
 		C21F971C1E0DD1D9001DC87D /* OpenGlGpuApi */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +342,7 @@
 		C2A34A4A1D9FCA02008ECCDD /* Jetpack */ = {
 			isa = PBXGroup;
 			children = (
+				C20E989E1E1D5F83008C1764 /* ShaderLab */,
 				C2F624E41DC8B35100E65F98 /* Binding */,
 				C25434971DB170640007416B /* Utilities */,
 				C25434901DB170130007416B /* User */,
@@ -615,6 +632,7 @@
 				C2A34A5D1D9FCD3F008ECCDD /* SceneEditor.storyboard in Resources */,
 				C203D4121DA03E68003DF46C /* Vector3EditorViewController.storyboard in Resources */,
 				C25434891DB16ACE0007416B /* SceneViewer.storyboard in Resources */,
+				C20E98A01E1D5FFD008C1764 /* ShaderLab.storyboard in Resources */,
 				C27B242E1DA12A1F009B270A /* EulerEditorViewController.storyboard in Resources */,
 				C203D4101DA03E68003DF46C /* TagEditorViewController.storyboard in Resources */,
 			);
@@ -685,6 +703,8 @@
 				C2A34A7F1D9FD6B5008ECCDD /* Primitives.swift in Sources */,
 				C254348D1DB16C790007416B /* NodeEditorViewController.swift in Sources */,
 				C2A34A6B1D9FD0FB008ECCDD /* Visible.swift in Sources */,
+				C20E98A21E1D6072008C1764 /* ShaderLabViewController.swift in Sources */,
+				C20E98A41E1D6613008C1764 /* ScopeViewController.swift in Sources */,
 				C254348F1DB16CA20007416B /* SceneViewerViewController.swift in Sources */,
 				C252CF2C1DA01B0800E1D288 /* ModelsEditorConcretes.swift in Sources */,
 			);

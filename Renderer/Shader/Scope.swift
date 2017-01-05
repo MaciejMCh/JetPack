@@ -12,8 +12,8 @@ import Foundation
 let bugv3: Variable<Vec<SizeOf3>>? = nil
 let bugm4: Variable<Mat<SizeOf4>>? = nil
 
-struct Scope {
-    let instructions: [Instruction]
+public struct Scope {
+    public let instructions: [Instruction]
 }
 
 // MARK: Basic samples
