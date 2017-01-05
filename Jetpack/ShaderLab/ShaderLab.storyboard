@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -14,30 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLT-4d-33q">
-                                <rect key="frame" x="28" y="40" width="390" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" ambiguous="YES" id="5CH-9J-jrw">
-                                    <rect key="frame" x="1" y="1" width="388" height="238"/>
+                            <scrollView wantsLayer="YES" borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLT-4d-33q">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <clipView key="contentView" id="5CH-9J-jrw">
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Opy-wh-Uh0">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="433" height="360"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="jcP-jZ-1vX">
-                                    <rect key="frame" x="1" y="223" width="388" height="16"/>
+                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="VBB-6m-O1x">
-                                    <rect key="frame" x="373" y="1" width="16" height="238"/>
+                                    <rect key="frame" x="433" y="1" width="16" height="298"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="SLT-4d-33q" firstAttribute="top" secondItem="kj0-IN-Zte" secondAttribute="top" id="CCC-Ss-ILV"/>
+                            <constraint firstAttribute="trailing" secondItem="SLT-4d-33q" secondAttribute="trailing" id="Rd3-6y-bgk"/>
+                            <constraint firstItem="SLT-4d-33q" firstAttribute="leading" secondItem="kj0-IN-Zte" secondAttribute="leading" id="ZFz-Ub-t7Y"/>
+                            <constraint firstAttribute="bottom" secondItem="SLT-4d-33q" secondAttribute="bottom" id="aUF-hW-WO3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollViewContainer" destination="Opy-wh-Uh0" id="YwI-nv-4sp"/>
@@ -52,13 +57,98 @@
             <objects>
                 <viewController storyboardIdentifier="MapSpot" id="mdt-7N-fSU" customClass="MapSpotViewController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="65I-4q-8TE">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="UAY-DN-Tl5">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5pf-J5-1Sz"/>
+                                    <constraint firstAttribute="width" constant="100" id="J8A-Xu-rpE"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="UAY-DN-Tl5" firstAttribute="leading" secondItem="65I-4q-8TE" secondAttribute="leading" id="3kF-9t-Fnv"/>
+                            <constraint firstAttribute="trailing" secondItem="UAY-DN-Tl5" secondAttribute="trailing" id="4xF-d1-RAo"/>
+                            <constraint firstItem="UAY-DN-Tl5" firstAttribute="top" secondItem="65I-4q-8TE" secondAttribute="top" id="IeY-UQ-ZaK"/>
+                            <constraint firstAttribute="bottom" secondItem="UAY-DN-Tl5" secondAttribute="bottom" id="diP-Ox-HrO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="R1c-4J-iDs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166" y="849"/>
+            <point key="canvasLocation" x="-147" y="716"/>
+        </scene>
+        <!--Scope View Controller-->
+        <scene sceneID="pQ0-S0-AhH">
+            <objects>
+                <viewController storyboardIdentifier="Scope" id="o71-kY-8uo" customClass="ScopeViewController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="nEr-Cy-CoE">
+                        <rect key="frame" x="0.0" y="0.0" width="237" height="218"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-wD-6p4">
+                                <rect key="frame" x="0.0" y="0.0" width="237" height="218"/>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1ra-wD-6p4" secondAttribute="trailing" id="08n-x6-dLW"/>
+                            <constraint firstItem="1ra-wD-6p4" firstAttribute="top" secondItem="nEr-Cy-CoE" secondAttribute="top" id="eR9-3L-6qW"/>
+                            <constraint firstAttribute="bottom" secondItem="1ra-wD-6p4" secondAttribute="bottom" id="pV9-0c-XUA"/>
+                            <constraint firstItem="1ra-wD-6p4" firstAttribute="leading" secondItem="nEr-Cy-CoE" secondAttribute="leading" id="sxr-3m-mVu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="1ra-wD-6p4" id="pow-ch-5gH"/>
+                    </connections>
+                </viewController>
+                <customObject id="QvF-IH-2Rv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.5" y="775"/>
+        </scene>
+        <!--View Loader Controller-->
+        <scene sceneID="nMO-d0-dFc">
+            <objects>
+                <viewController storyboardIdentifier="Variable" id="nde-6q-ztb" customClass="ViewLoaderController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="iQI-Xd-86R" customClass="VariableView" customModule="Jetpack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-ro-KQe">
+                                <rect key="frame" x="8" y="5" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mx5-I7-ZLZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dRo-Eq-3rr">
+                                <rect key="frame" x="58" y="5" width="389" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="7gb-1Q-ryY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="3sT-ro-KQe" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="10" id="8hQ-3f-zy8"/>
+                            <constraint firstAttribute="trailing" secondItem="dRo-Eq-3rr" secondAttribute="trailing" constant="5" id="BNX-1J-0Ok"/>
+                            <constraint firstItem="dRo-Eq-3rr" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="60" id="gad-Nh-Yea"/>
+                            <constraint firstItem="dRo-Eq-3rr" firstAttribute="top" secondItem="iQI-Xd-86R" secondAttribute="top" constant="5" id="j8t-Zb-gdC"/>
+                            <constraint firstItem="3sT-ro-KQe" firstAttribute="centerY" secondItem="iQI-Xd-86R" secondAttribute="centerY" id="rd4-KO-ery"/>
+                            <constraint firstAttribute="bottom" secondItem="dRo-Eq-3rr" secondAttribute="bottom" constant="5" id="zlG-u1-lcH"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="nameLabel" destination="dRo-Eq-3rr" id="Fqt-U9-tHo"/>
+                            <outlet property="typeLabel" destination="3sT-ro-KQe" id="AyL-4g-0wX"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <customObject id="sim-DB-CU8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="821"/>
         </scene>
     </scenes>
 </document>

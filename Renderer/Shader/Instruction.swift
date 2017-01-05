@@ -9,22 +9,32 @@
 import Foundation
 
 public protocol Instruction {
-    
+    func variablesUsed() -> [AnyVariable]
 }
 
-protocol AnyEvaluation {
+protocol AnyEvaluation: Instruction {
     
 }
 
 class Evaluation<T>: AnyEvaluation {
-    
+    func variablesUsed() -> [AnyVariable] {
+        return []
+    }
 }
 
-class Variable<T>: Evaluation<T> {
+public protocol AnyVariable {
+    var name: String {get}
+}
+
+class Variable<T>: Evaluation<T>, AnyVariable {
     let name: String
     
     init(name: String) {
         self.name = name
+    }
+    
+    override func variablesUsed() -> [AnyVariable] {
+        return [self]
     }
 }
 
@@ -48,13 +58,25 @@ class InfixOperation<Lhs, Rhs, Result>: Evaluation<Result> {
         self.lhs = lhs
         self.rhs = rhs
     }
+    
+    override func variablesUsed() -> [AnyVariable] {
+        return lhs.variablesUsed() + rhs.variablesUsed()
+    }
 }
 
 struct Assignment<T>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
+    
+    func variablesUsed() -> [AnyVariable] {
+        return [variable] + evaluation.variablesUsed()
+    }
 }
 
 struct Declaration<T>: Instruction {
     let variable: Variable<T>
+    
+    func variablesUsed() -> [AnyVariable] {
+        return [variable]
+    }
 }

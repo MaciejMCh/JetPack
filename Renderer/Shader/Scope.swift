@@ -17,8 +17,8 @@ public struct Scope {
 }
 
 // MARK: Basic samples
-struct Scopes {
-    static func lambertFactor() -> Scope {
+public struct Scopes {
+    public static func lambertFactor() -> Scope {
         let surfaceNormalVersor: Variable<Vec3> = Variable(name: "surfaceNormalVersor")
         let surfaceToLightVersor: Variable<Vec3> = Variable(name: "surfaceToLightVersor")
         let lambertFactor: Variable<Scalar> = Variable(name: "lambertFactor")
