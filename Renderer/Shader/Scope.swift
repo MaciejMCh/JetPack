@@ -19,6 +19,7 @@ public struct Scope {
 // MARK: Basic samples
 public struct Scopes {
     public static func lambertFactor() -> Scope {
+        
         let surfaceNormalVersor: Variable<Vec3> = Variable(name: "surfaceNormalVersor")
         let surfaceToLightVersor: Variable<Vec3> = Variable(name: "surfaceToLightVersor")
         let lambertFactor: Variable<Scalar> = Variable(name: "lambertFactor")
@@ -27,18 +28,5 @@ public struct Scopes {
         let assignment = Assignment(variable: lambertFactor, evaluation: dotProduct)
         
         return Scope(instructions: [assignment])
-    }
-    
-    static func vertexShaderDeclarations(attributeInterface: AttributeInterface) -> Scope {
-        var declarations: [Instruction] = []
-        for attributeFace in attributeInterface.attributes {
-            switch attributeFace.size() {
-            case 2: declarations.append(Declaration<Vec2>(variable: Variable(name: attributeFace.name())))
-            case 3: declarations.append(Declaration<Vec3>(variable: Variable(name: attributeFace.name())))
-            case 4: declarations.append(Declaration<Vec4>(variable: Variable(name: attributeFace.name())))
-            default: break
-            }
-        }
-        return Scope(instructions: declarations)
     }
 }

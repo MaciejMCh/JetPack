@@ -8,21 +8,13 @@
 
 import Foundation
 
-public protocol Instruction {
-    func variablesUsed() -> [AnyVariable]
-}
+public protocol Instruction {}
 
-protocol AnyEvaluation: Instruction {
-    
-}
+public protocol AnyEvaluation: Instruction {}
 
-class Evaluation<T: Primitive>: AnyEvaluation {
-    func variablesUsed() -> [AnyVariable] {
-        return []
-    }
-}
+class Evaluation<T: Primitive>: AnyEvaluation {}
 
-public protocol AnyVariable {
+public protocol AnyVariable: AnyEvaluation {
     var name: String {get}
     var type: Primitive {get}
 }
@@ -35,18 +27,16 @@ class Variable<T: Primitive>: Evaluation<T>, AnyVariable {
         self.name = name
         self.type = T()
     }
-    
-    override func variablesUsed() -> [AnyVariable] {
-        return [self]
-    }
 }
 
-class Function<T: Primitive>: Evaluation<T> {
-    let signature: String
+protocol AnyFunction {
+    var arguments: [AnyEvaluation] {get}
+}
+
+class Function<T: Primitive>: Evaluation<T>, AnyFunction {
     let arguments: [AnyEvaluation]
     
-    init(signature: String, arguments: [AnyEvaluation]) {
-        self.signature = signature
+    init(arguments: [AnyEvaluation]) {
         self.arguments = arguments
     }
 }
@@ -61,25 +51,13 @@ class InfixOperation<Lhs: Primitive, Rhs: Primitive, Result: Primitive>: Evaluat
         self.lhs = lhs
         self.rhs = rhs
     }
-    
-    override func variablesUsed() -> [AnyVariable] {
-        return lhs.variablesUsed() + rhs.variablesUsed()
-    }
 }
 
 struct Assignment<T: Primitive>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
-    
-    func variablesUsed() -> [AnyVariable] {
-        return [variable] + evaluation.variablesUsed()
-    }
 }
 
 struct Declaration<T: Primitive>: Instruction {
     let variable: Variable<T>
-    
-    func variablesUsed() -> [AnyVariable] {
-        return [variable]
-    }
 }

@@ -33,10 +33,6 @@ class MapViewController: NSViewController {
     func tryit() {
         let c = ScopeViewController.instantiate()
         addMapEntity(controller: c)
-        
-//        let v = c.view
-////        v.frame = CGRect(x: 10, y: 10, width: 100, height: 100)
-//        v.layer!.backgroundColor = NSColor.red.cgColor
     }
     
     func addMapEntity(controller: NSViewController) {

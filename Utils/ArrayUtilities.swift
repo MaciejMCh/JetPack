@@ -8,9 +8,8 @@
 
 import Foundation
 
-
-extension Array {
-    func typeFiltered<T>() -> [T] {
+public extension Array {
+    public func typeFiltered<T>() -> [T] {
         var filtered: [T] = []
         for element in self {
             if let elementWithType = element as? T {
@@ -21,7 +20,6 @@ extension Array {
     }
 }
 
-
 infix operator +
 public func + <T>(lhs: Array<T>, rhs: Array<T>) -> Array<T> {
     var result: Array<T> = []
@@ -30,6 +28,15 @@ public func + <T>(lhs: Array<T>, rhs: Array<T>) -> Array<T> {
     return result
 }
 
+infix operator +?
+public func +? <T>(lhs: Array<T>, rhs: Array<T>?) -> Array<T> {
+    var result: Array<T> = []
+    result.append(contentsOf: lhs)
+    if let rhs = rhs {
+        result.append(contentsOf: rhs)
+    }
+    return result
+}
 
 extension Array where Element : Collection {
     func stomp() -> [Element.Iterator.Element] {
@@ -40,7 +47,6 @@ extension Array where Element : Collection {
         return result
     }
 }
-
 
 class WeakReference<T: AnyObject> {
     weak var reference: T?

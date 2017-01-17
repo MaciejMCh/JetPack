@@ -36,14 +36,18 @@ class ScopeViewController: NSViewController {
         view.layer!.borderWidth = 1
         view.layer!.borderColor = NSColor.black.cgColor
         
-        for instruction in scope.instructions {
-            for variable in instruction.variablesUsed() {
-                let variableView = VariableView.instantiate()
-                variableView.nameLabel.stringValue = variable.name
-                variableView.typeLabel.stringValue = variable.type.name
-                stackView.addView(variableView, in: .bottom)
-            }
+        for variable in scope.variablesUsed() {
+            let variableView = InputSocketView.instantiate()
+            variableView.nameLabel.stringValue = variable.name
+            variableView.typeLabel.stringValue = variable.type.name
+            stackView.addView(variableView, in: .bottom)
         }
+//        for outputSocket in scope.outputSockets {
+//            let variableView = OutputSocketView.instantiate()
+//            variableView.nameLabel.stringValue = outputSocket.name
+//            variableView.typeLabel.stringValue = outputSocket.type.name
+//            stackView.addView(variableView, in: .bottom)
+//        }
     }
 }
 
@@ -52,11 +56,23 @@ extension ScopeViewController: StoryboardInstance {
     static let storyboardName = "ShaderLab"
 }
 
-class VariableView: NSView {
-    static func instantiate() -> VariableView {
+class InputSocketView: NSView {
+    static func instantiate() -> InputSocketView {
         let storyboard = NSStoryboard(name: "ShaderLab", bundle: nil)
-        let controller = storyboard.instantiateController(withIdentifier: "Variable") as! NSViewController
-        let view = controller.view as! VariableView
+        let controller = storyboard.instantiateController(withIdentifier: "InputSocket") as! NSViewController
+        let view = controller.view as! InputSocketView
+        return view
+    }
+    
+    @IBOutlet weak var nameLabel: NSTextField!
+    @IBOutlet weak var typeLabel: NSTextField!
+}
+
+class OutputSocketView: NSView {
+    static func instantiate() -> OutputSocketView {
+        let storyboard = NSStoryboard(name: "ShaderLab", bundle: nil)
+        let controller = storyboard.instantiateController(withIdentifier: "OutputSocket") as! NSViewController
+        let view = controller.view as! OutputSocketView
         return view
     }
     

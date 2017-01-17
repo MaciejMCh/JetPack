@@ -88,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="218" height="218"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-wD-6p4">
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ra-wD-6p4">
                                 <rect key="frame" x="0.0" y="0.0" width="218" height="218"/>
                             </stackView>
                         </subviews>
@@ -110,13 +110,13 @@
         <!--View Loader Controller-->
         <scene sceneID="nMO-d0-dFc">
             <objects>
-                <viewController storyboardIdentifier="Variable" id="nde-6q-ztb" customClass="ViewLoaderController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="iQI-Xd-86R" customClass="VariableView" customModule="Jetpack" customModuleProvider="target">
+                <viewController storyboardIdentifier="InputSocket" id="nde-6q-ztb" customClass="ViewLoaderController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="iQI-Xd-86R" customClass="InputSocketView" customModule="Jetpack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="27"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-ro-KQe">
-                                <rect key="frame" x="8" y="5" width="37" height="17"/>
+                                <rect key="frame" x="28" y="5" width="37" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="mx5-I7-ZLZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -124,8 +124,16 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dRo-Eq-3rr">
-                                <rect key="frame" x="58" y="5" width="389" height="17"/>
+                                <rect key="frame" x="78" y="5" width="369" height="17"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="7gb-1Q-ryY">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IPO-dh-cG8">
+                                <rect key="frame" x="8" y="5" width="12" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="o" id="ljw-G6-bxU">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -133,10 +141,12 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="3sT-ro-KQe" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="10" id="8hQ-3f-zy8"/>
+                            <constraint firstItem="3sT-ro-KQe" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="30" id="8hQ-3f-zy8"/>
                             <constraint firstAttribute="trailing" secondItem="dRo-Eq-3rr" secondAttribute="trailing" constant="5" id="BNX-1J-0Ok"/>
-                            <constraint firstItem="dRo-Eq-3rr" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="60" id="gad-Nh-Yea"/>
+                            <constraint firstItem="IPO-dh-cG8" firstAttribute="leading" secondItem="iQI-Xd-86R" secondAttribute="leading" constant="10" id="afO-MR-kyg"/>
+                            <constraint firstItem="dRo-Eq-3rr" firstAttribute="leading" secondItem="3sT-ro-KQe" secondAttribute="leading" constant="50" id="iIe-JS-pXj"/>
                             <constraint firstItem="dRo-Eq-3rr" firstAttribute="top" secondItem="iQI-Xd-86R" secondAttribute="top" constant="5" id="j8t-Zb-gdC"/>
+                            <constraint firstItem="IPO-dh-cG8" firstAttribute="centerY" secondItem="iQI-Xd-86R" secondAttribute="centerY" id="pdH-Po-lfy"/>
                             <constraint firstItem="3sT-ro-KQe" firstAttribute="centerY" secondItem="iQI-Xd-86R" secondAttribute="centerY" id="rd4-KO-ery"/>
                             <constraint firstAttribute="bottom" secondItem="dRo-Eq-3rr" secondAttribute="bottom" constant="5" id="zlG-u1-lcH"/>
                         </constraints>
@@ -149,6 +159,59 @@
                 <customObject id="sim-DB-CU8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="412" y="821"/>
+        </scene>
+        <!--View Loader Controller-->
+        <scene sceneID="Dte-BK-v5E">
+            <objects>
+                <viewController storyboardIdentifier="OutputSocket" id="xNg-WQ-eld" customClass="ViewLoaderController" customModule="Jetpack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="0Jk-t9-yRH" customClass="OutputSocketView" customModule="Jetpack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ua9-ZD-fcI">
+                                <rect key="frame" x="28" y="5" width="37" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="HBO-eh-DMh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tMG-ew-njS">
+                                <rect key="frame" x="78" y="5" width="344" height="17"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="3s9-zT-pRQ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RJZ-bw-sEW">
+                                <rect key="frame" x="430" y="5" width="12" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="o" id="h6m-Ao-gY3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tMG-ew-njS" secondAttribute="trailing" constant="30" id="2eR-78-F01"/>
+                            <constraint firstItem="tMG-ew-njS" firstAttribute="leading" secondItem="Ua9-ZD-fcI" secondAttribute="leading" constant="50" id="5Yz-GJ-r6m"/>
+                            <constraint firstItem="Ua9-ZD-fcI" firstAttribute="centerY" secondItem="0Jk-t9-yRH" secondAttribute="centerY" id="PQ8-mn-ixw"/>
+                            <constraint firstItem="RJZ-bw-sEW" firstAttribute="centerY" secondItem="0Jk-t9-yRH" secondAttribute="centerY" id="YcM-74-J7r"/>
+                            <constraint firstAttribute="bottom" secondItem="tMG-ew-njS" secondAttribute="bottom" constant="5" id="m2b-Ud-N8j"/>
+                            <constraint firstItem="tMG-ew-njS" firstAttribute="top" secondItem="0Jk-t9-yRH" secondAttribute="top" constant="5" id="qym-6w-pX9"/>
+                            <constraint firstItem="Ua9-ZD-fcI" firstAttribute="leading" secondItem="0Jk-t9-yRH" secondAttribute="leading" constant="30" id="se0-Ar-8d5"/>
+                            <constraint firstAttribute="trailing" secondItem="RJZ-bw-sEW" secondAttribute="trailing" constant="10" id="uTA-oI-piW"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="nameLabel" destination="tMG-ew-njS" id="ZCb-ea-Td6"/>
+                            <outlet property="typeLabel" destination="Ua9-ZD-fcI" id="yGt-v1-fpH"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <customObject id="MPL-rC-Thx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="896"/>
         </scene>
     </scenes>
 </document>
