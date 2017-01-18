@@ -41,6 +41,12 @@ class ScopeViewController: NSViewController {
             variableView.nameLabel.stringValue = variable.name
             variableView.typeLabel.stringValue = variable.type.name
             stackView.addView(variableView, in: .bottom)
+            
+            if scope.isDeclaredInScope(variable: variable) {
+                variableView.typeLabel.textColor = NSColor.black
+            } else {
+                variableView.typeLabel.textColor = NSColor.red
+            }
         }
 //        for outputSocket in scope.outputSockets {
 //            let variableView = OutputSocketView.instantiate()

@@ -7,12 +7,22 @@
 //
 
 import Foundation
+import Utils
 
-public protocol Instruction {}
+public protocol Instruction {
+    func variablesUsed() -> [AnyVariable]
+}
 
-public protocol AnyEvaluation: Instruction {}
 
-class Evaluation<T: Primitive>: AnyEvaluation {}
+public protocol AnyEvaluation {
+    func variablesUsed() -> [AnyVariable]
+}
+
+public class Evaluation<T: Primitive>: AnyEvaluation {
+    public func variablesUsed() -> [AnyVariable] {
+        return []
+    }
+}
 
 public protocol AnyVariable: AnyEvaluation {
     var name: String {get}
@@ -29,7 +39,7 @@ class Variable<T: Primitive>: Evaluation<T>, AnyVariable {
     }
 }
 
-protocol AnyFunction {
+protocol AnyFunction: AnyEvaluation {
     var arguments: [AnyEvaluation] {get}
 }
 
@@ -39,25 +49,47 @@ class Function<T: Primitive>: Evaluation<T>, AnyFunction {
     init(arguments: [AnyEvaluation]) {
         self.arguments = arguments
     }
+    
+    override func variablesUsed() -> [AnyVariable] {
+        return arguments.typeFiltered()
+    }
 }
 
-class InfixOperation<Lhs: Primitive, Rhs: Primitive, Result: Primitive>: Evaluation<Result> {
-    let operatorSymbol: String
-    let lhs: Evaluation<Lhs>
-    let rhs: Evaluation<Rhs>
+class OneArgFunction<Arg: Primitive, Result: Primitive>: Function<Result> {
+    let arg: Evaluation<Arg>
     
-    init(operatorSymbol: String, lhs: Evaluation<Lhs>, rhs: Evaluation<Rhs>) {
-        self.operatorSymbol = operatorSymbol
-        self.lhs = lhs
-        self.rhs = rhs
+    init(arg: Evaluation<Arg>) {
+        self.arg = arg
+        super.init(arguments: [arg])
+    }
+}
+
+class TwoArgsFunction<Arg1: Primitive, Arg2: Primitive, Result: Primitive>: Function<Result> {
+    let arg1: Evaluation<Arg1>
+    let arg2: Evaluation<Arg2>
+    
+    init(arg1: Evaluation<Arg1>, arg2: Evaluation<Arg2>) {
+        self.arg1 = arg1
+        self.arg2 = arg2
+        super.init(arguments: [arg1, arg2])
     }
 }
 
 struct Assignment<T: Primitive>: Instruction {
     let variable: Variable<T>
     let evaluation: Evaluation<T>
+    
+    func variablesUsed() -> [AnyVariable] {
+        var result = evaluation.variablesUsed()
+        result.append(variable)
+        return result
+    }
 }
 
-struct Declaration<T: Primitive>: Instruction {
-    let variable: Variable<T>
+struct Declaration: Instruction {
+    let variable: AnyVariable
+    
+    func variablesUsed() -> [AnyVariable] {
+        return [variable]
+    }
 }

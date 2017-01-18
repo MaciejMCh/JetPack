@@ -24,9 +24,10 @@ public struct Scopes {
         let surfaceToLightVersor: Variable<Vec3> = Variable(name: "surfaceToLightVersor")
         let lambertFactor: Variable<Scalar> = Variable(name: "lambertFactor")
         
-        let dotProduct = AlgebraicPrimitiveOperations.dotProduct(lhs: surfaceNormalVersor, rhs: surfaceToLightVersor)
+        let dotProduct = AlgebraicPrimitiveOperations.dotProduct(arg1: surfaceNormalVersor, arg2: surfaceToLightVersor)
+        let lambertFactorDeclaration = Declaration(variable: lambertFactor)
         let assignment = Assignment(variable: lambertFactor, evaluation: dotProduct)
         
-        return Scope(instructions: [assignment])
+        return Scope(instructions: [lambertFactorDeclaration, assignment])
     }
 }

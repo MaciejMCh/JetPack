@@ -11,34 +11,21 @@ import Utils
 
 public extension Scope {
     public func variablesUsed() -> [AnyVariable] {
-        return (instructions.typeFiltered() as [VariablesUser]).map{$0.variables()}.reduce([], +)
+        return instructions.map{$0.variablesUsed()}.reduce([], +)
     }
-}
-
-protocol VariablesUser {
-    func variables() -> [AnyVariable]
-}
-
-extension Declaration: VariablesUser {
-    func variables() -> [AnyVariable] {
-        return [variable]
-    }
-}
-
-extension AnyEvaluation {
-    func variables() -> [AnyVariable] {
-        if let function = self as? AnyFunction {
-            return function.arguments.map{$0.variables()}.reduce([], +)
+    
+    public func isDeclaredInScope(variable: AnyVariable) -> Bool {
+        for declaration: Declaration in instructions.typeFiltered() {
+            if declaration.variable.equals(variable: variable)  {
+                return true
+            }
         }
-        if let variable = self as? AnyVariable {
-            return [variable]
-        }
-        return []
+        return false
     }
 }
 
-extension Assignment: VariablesUser {
-    func variables() -> [AnyVariable] {
-        return [variable] +? evaluation.variables()
+extension AnyVariable {
+    func equals(variable: AnyVariable) -> Bool {
+        return name == variable.name && type.name == type.name
     }
 }
